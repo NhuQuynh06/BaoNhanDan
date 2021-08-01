@@ -8,6 +8,10 @@
 * search result stock
 */
 // > GLOBAL Elements
+@mixin roboto-medium {
+  font-family: "roboto medium";
+}
+
 .header {
 
   &__banner {
@@ -42,20 +46,22 @@
 
     .text-1,
     .text-2 {
-      font-family: 'Myriad Pro', serif;
+      // font-family: 'Myriad Pro', serif;
       color: $white;
       display: block;
     }
-    
+
     .text-1 {
       text-transform: uppercase;
       font-weight: 600;
       font-size: 43px;
       line-height: 55px;
       margin-bottom: 5px;
+      font-family: "myriad-semibold";
     }
-
+    
     .text-2 {
+      font-family: "myriad-cond";
       text-transform: capitalize;
       font-weight: $font-weight-normal;
       font-size: 30px;
@@ -121,6 +127,7 @@
           // position: relative;
           display: block;
           padding-bottom: 10px;
+          font-family: "roboto-medium"
 
         }
 

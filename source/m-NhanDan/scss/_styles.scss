@@ -19,11 +19,10 @@
   height: 47px;
   margin: 0 auto;
   position: relative;
-  background: white;
 
   &::before {
     content: '';
-    width: 40px;
+    width: 46px;
     height: 47px;
     background-color: transparent;
     position: absolute;
@@ -257,7 +256,7 @@
 
 .box-style-2 {
   background: #F7F7F7;
-  padding: 12px 16px 60px;
+  padding: 12px 0 60px;
 
   .box-heading {
     text-align: center;
@@ -276,8 +275,11 @@
 
 
   .box-content {
-    margin: 34px 0 76px;
-    // background: #f7f7f7 url(../img/bg-03.png) center center no-repeat;
+    // padding: 34px 0 76px;
+    height: 435px;
+    padding-top: 34px;
+    padding-bottom: 45px;
+    background: #f7f7f7 url(../img/bg-03.png) center 0px no-repeat;
 
     .item {
       display: flex;
@@ -285,18 +287,37 @@
       margin: 0 auto;
       height: 92px;
       margin-bottom: -5px;
-      padding: 10px 17px;
-    }
+      padding: 10px 40px;
 
-    .stt {
-      @include myriad-pro();
-      font-style: normal;
-      font-weight: 600;
-      font-size: 60px;
-      line-height: 72px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #343A40;
+      .rank-1 {
+        width: 35px;
+        height: 39px;
+      }
+
+      &:first-child {
+        .rank-1 {
+          background: url(../img/1.png)center left no-repeat;
+
+        }
+      }
+
+      &:nth-child(2) {
+        .rank-1 {
+          background: url(../img/2.png) center right no-repeat;
+        }
+      }
+
+      &:nth-child(3) {
+        .rank-1 {
+          background: url(../img/3.png)center left no-repeat;
+        }
+      }
+
+      &:nth-child(4) {
+        .rank-1 {
+          background: url(../img/4.png) center right no-repeat;
+        }
+      }
     }
 
     .story {
@@ -316,16 +337,6 @@
       background: url(../img/vector-01.png) center left no-repeat;
       position: relative;
 
-      &::before {
-        // content: '';
-        // background: url(../img/tamgiac.png);
-        // position: absolute;
-        // width: 38px;
-        // left: 11px;
-        // height: 176px;
-        // top: 6px;
-      }
-
     }
 
     .right {
@@ -333,17 +344,11 @@
       justify-content: flex-end;
       position: relative;
 
-      &::before {
-        // content: '';
-        // background: url(../img/tamgiac-left.png);
-        // position: absolute;
-        // width: 49px;
-        // right: 5px;
-        // height: 176px;
-        // top: 7px;
+      .story__heading {
+        text-align: right;
       }
 
-      .stt {
+      .rank-1 {
         order: 1;
       }
 
@@ -540,10 +545,10 @@
 
 .box-style-4 {
   padding-bottom: 200px;
+  background-color: #F7F7F7;
 
   .box-heading {
-    background-color: #F7F7F7;
-    padding: 107px 52px 86px;
+    padding: 20px 0 10px;
     text-align: center;
 
     a {
@@ -559,12 +564,27 @@
   }
 
   .box-content {
-    background: #f7f7f7;
 
     .story {
       width: 275px;
       text-align: center;
       margin: 0 auto;
+
+      &__heading {
+        padding-bottom: 20px;
+        position: relative;
+        margin-bottom: 15px;
+
+        &::after {
+          content: '';
+          background: url(../img/line.png) center center no-repeat;
+          width: 1px;
+          height: 20px;
+          position: absolute;
+          right: 50%;
+          top: 45px;
+        }
+      }
 
       &__heading a {
         @include noto-serif();
@@ -581,16 +601,23 @@
         width: 75px;
         height: 75px;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        margin-bottom: 12px;
+      }
+    }
+
+    .story:last-of-type {
+      .story__heading::after {
+        display: none;
       }
     }
   }
 }
 
 .box-style-5 {
-  padding-bottom: 240px;
+  padding-bottom: 120px;
 
   .box-heading {
-    margin-bottom: 60px;
+    margin-bottom: 18px
   }
 
   .text-1,
@@ -604,28 +631,30 @@
     @include playfair-display();
     color: #212529;
     font-weight: 900;
-    font-size: 40px;
-    line-height: 67px;
-    margin-bottom: 11px
+    margin-bottom: 12px;
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 29px;
   }
 
   .text-2 {
     @include noto-serif();
     font-weight: $font-weight-bold;
-    font-size: 18px;
     line-height: 20px;
     color: #495057;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   .box-content {
     .wrap-img {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 29px;
 
       img {
         border-radius: 50%;
-        width: 352px;
-        height: 352px;
+        width: 140px;
+        height: 140px;
       }
     }
 
@@ -634,7 +663,7 @@
     }
 
     .story {
-      padding-left: 101px;
+      padding-left: 65px;
 
       &__heading a {
         font-weight: $font-weight-normal;
@@ -645,12 +674,12 @@
       }
     }
 
-    .col-4:nth-child(1n+4) {
-      margin-top: 60px;
+    .col-12:last-of-type {
+      margin-bottom: 37px;
     }
 
-    .row {
-      margin-bottom: 60px;
+    .col-12 {
+      margin-bottom: 30px;
     }
   }
 }

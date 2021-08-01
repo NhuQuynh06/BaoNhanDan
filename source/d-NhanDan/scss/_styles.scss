@@ -128,26 +128,6 @@
 
 // mixin font
 
-@mixin roboto {
-  font-family: 'Roboto', sans-serif;
-}
-
-@mixin myriad-pro {
-  font-family: 'Myriad-Pro', serif;
-}
-
-@mixin noto-serif {
-  font-family: 'Noto Serif', serif;
-}
-
-@mixin playfair-display {
-  font-family: 'Playfair Display', serif;
-}
-
-@mixin roboto-condensed {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
 @mixin pd-bottom {
   padding-bottom: 300px;
 }
@@ -188,6 +168,7 @@ a:hover {
 
     a {
       color: white;
+      font-family: "roboto-medium";
 
       &:hover {
         color: white !important;
@@ -278,7 +259,7 @@ a:hover {
       line-height: 24px;
       text-align: center;
       color: #212529;
-      @include noto-serif();
+      font-family: "noto-regular";
     }
   }
 
@@ -336,7 +317,8 @@ a:hover {
       line-height: 67px;
       text-transform: uppercase;
       color: #212529;
-      @include playfair-display();
+      font-family: "playfair-display";
+      // // @include playfair-display();
       display: block;
     }
   }
@@ -394,7 +376,7 @@ a:hover {
     // .question,
     // .stt {
     //   color: #343A40;
-    //   @include myriad-pro();
+    //   // @include myriad-pro();
     // }
 
     // .question {
@@ -418,7 +400,8 @@ a:hover {
     }
 
     .story a {
-      @include noto-serif();
+      // // @include noto-serif();
+      font-family: "noto-bold";
       font-style: normal;
       font-weight: $font-weight-bold;
       font-size: 16px;
@@ -490,7 +473,7 @@ a:hover {
       line-height: 67px;
       text-transform: uppercase;
       color: #212529;
-      @include playfair-display();
+      font-family: "playfair-display";
     }
   }
 
@@ -511,7 +494,7 @@ a:hover {
 
 
     a {
-      @include noto-serif();
+      font-family: "noto-medium";
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
@@ -621,7 +604,7 @@ a:hover {
       line-height: 67px;
       text-align: center;
       text-transform: uppercase;
-      @include playfair-display();
+      font-family: "playfair-display";
       color: #212529;
     }
   }
@@ -641,7 +624,7 @@ a:hover {
       position: absolute;
 
       &__heading a {
-        @include noto-serif();
+        font-family: "noto-regular";
         font-weight: $font-weight-normal;
         font-size: 16px;
         line-height: 22px;
@@ -714,7 +697,7 @@ a:hover {
   }
 
   .text-1 {
-    @include playfair-display();
+    font-family: "playfair-display";
     color: #212529;
     font-weight: 900;
     font-size: 40px;
@@ -723,7 +706,7 @@ a:hover {
   }
 
   .text-2 {
-    @include noto-serif();
+    font-family: "noto-bold";
     font-weight: $font-weight-bold;
     font-size: 18px;
     line-height: 20px;
@@ -754,7 +737,8 @@ a:hover {
         font-size: 14px;
         line-height: 22px;
         color: #212529;
-        @include noto-serif();
+        font-family: "noto-regular";
+        // @include noto-serif();
       }
     }
 
@@ -789,7 +773,8 @@ a:hover {
     }
 
     a {
-      @include myriad-pro();
+      // @include myriad-pro();
+      font-family: "myriad-bold-cond";
       font-weight: $font-weight-bold;
       font-size: 40px;
       line-height: 38px;
@@ -855,7 +840,8 @@ a:hover {
         margin-bottom: 16px;
 
         a {
-          @include myriad-pro();
+          // @include myriad-pro();
+          font-family: "myriad-bold-cond";
           font-weight: $font-weight-bold;
           font-size: 30px;
           line-height: 36px;
@@ -867,7 +853,7 @@ a:hover {
       }
 
       &__summary {
-        @include noto-serif();
+        font-family: "noto-regular";
         font-weight: $font-weight-normal;
         font-size: 14px;
         line-height: 22px;
@@ -875,10 +861,6 @@ a:hover {
         color: #212529;
         width: 170px;
         margin: 0 auto;
-        // overflow: hidden;
-        // display: -webkit-box;
-        // -webkit-line-clamp: 7;
-        // -webkit-box-orient: vertical;
       }
     }
 
@@ -935,7 +917,7 @@ a:hover {
     }
 
     .heading {
-      @include roboto-condensed();
+      font-family: "robotoCond-bold";
       font-weight: $font-weight-bold;
       font-size: 26px;
       line-height: 36px;
@@ -946,7 +928,8 @@ a:hover {
     }
 
     .sub-heading {
-      @include noto-serif();
+      // @include noto-serif();
+      font-family: "noto-bold";
       font-weight: $font-weight-bold;
       font-size: 16px;
       line-height: 24px;
@@ -956,7 +939,8 @@ a:hover {
     }
 
     p {
-      @include noto-serif();
+      // @include noto-serif();
+      font-family: "noto-regular";
       font-weight: $font-weight-normal;
       font-size: 16px;
       line-height: 24px;
@@ -985,6 +969,7 @@ a:hover {
     text-align: center;
 
     a {
+      font-family: "roboto-black";
       font-weight: 900;
       font-size: 40px;
       line-height: 47px;
@@ -1026,7 +1011,7 @@ a:hover {
     }
 
     &__heading a {
-      @include noto-serif();
+      font-family: "noto-bold";
       font-weight: $font-weight-bold;
       font-size: 16px;
       line-height: 24px;
@@ -1035,6 +1020,7 @@ a:hover {
     }
 
     &__summary {
+      font-family: "noto-regular";
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 4;
@@ -1087,7 +1073,7 @@ a:hover {
     }
 
     &__heading a {
-      @include noto-serif();
+      font-family: "noto-regular";
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
@@ -1102,6 +1088,7 @@ a:hover {
       line-height: 22px;
       color: #6C757D;
       padding-left: 72px;
+      font-family: "roboto-regular";
     }
   }
 }
@@ -1129,7 +1116,7 @@ a:hover {
     }
 
     a {
-      @include roboto-condensed();
+      // @include myriad-pro();
       font-weight: $font-weight-bold;
       font-size: 36px;
       line-height: 42px;
@@ -1150,7 +1137,7 @@ a:hover {
         line-height: 26px;
         color: #212529;
         margin-bottom: 8px;
-        @include roboto();
+        // @include
       }
 
       &__summary {
@@ -1175,7 +1162,7 @@ a:hover {
   }
 
   .box-heading .article__title {
-    @include noto-serif();
+    font-family: "noto-bold";
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -1204,7 +1191,7 @@ a:hover {
     padding-bottom: 32px;
 
     a {
-      @include noto-serif();
+      // @include noto-serif();
       font-weight: $font-weight-bold;
       font-size: 36px;
       line-height: 46px;
@@ -1304,7 +1291,7 @@ a:hover {
   }
 
   .col-3 {
-    @include noto-serif();
+    // @include noto-serif();
     border-left: 1px solid #F5F7F8;
     font-weight: $font-weight-normal;
     font-size: 16px;
