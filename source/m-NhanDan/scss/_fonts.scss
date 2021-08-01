@@ -1,0 +1,72 @@
+// ====================================
+// Global fonts
+// ====================================
+/*
+* TOC
+*
+* Roboto (normal)
+* Myriad-pro (normal)
+* Noto Serif (normal)
+* Playfair Display (normal)
+* Roboto Condensed (normal)
+*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+// end roboto
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    src: url('../fonts/Myriad-pro/MYRIADPRO-REGULAR.OTF'),
+        url('../fonts/Myriad-pro/MYRIADPRO-REGULAR.woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Myriad-Pro';
+    src: url('../fonts/Myriad-pro/MYRIADPRO-BOLD.OTF');
+    font-weight: 400;
+}
+
+// end Myriad-Pro
+
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/Noto_Serif/NotoSerif-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/Noto_Serif/NotoSerif-Regular.ttf');
+    font-weight: normal;
+}
+
+// end Noto
+
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf');
+    font-weight: 400;
+}
+
+// end Playfair
+
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-Regular.ttf');
+    font-weight: 400;
+}

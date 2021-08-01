@@ -1,0 +1,40 @@
+// ====================================
+// Story's style
+// ====================================
+/*
+* TOC
+*
+*/
+//
+.site-footer {
+    background: $third;
+    align-items: center;
+    display: flex;
+    padding: 33px 0;
+
+    .rank-1 a {
+        background: url(../img/logo-2.png) center center no-repeat;
+        width: 177px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0;
+        margin: 0 auto;
+    }
+
+    .rank-2 p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        margin-top: 13px;
+        text-align: center;
+
+    }
+
+    span {
+        cursor: pointer;
+    }
+}
