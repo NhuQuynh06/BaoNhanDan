@@ -30,7 +30,19 @@ if ($sliderContent) {
 $('.chevron-wrap').click(function (e) {
     const $this = $(e.target);
     var id = $this.attr('data-link');
+    console.log(id)
     $('html, body').animate({ scrollTop: $('#' + id).offset().top }, 1000);
+});
+
+$('.dots').on('click', function() {
+    const prefix = 'chapter';
+    var id = Number($(this).attr('data-link')) - 1;
+    if (id <= 0) {
+        $('html, body').animate({ scrollTop: $('.container').offset().top }, 1000);
+    } else {
+        $('html, body').animate({ scrollTop: $('#' + prefix + id).offset().top }, 1000);
+    }
+    
 });
 
 
