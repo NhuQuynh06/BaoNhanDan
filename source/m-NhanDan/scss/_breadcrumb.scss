@@ -19,7 +19,7 @@
 //         &:before {
 //             content: '';
 //             width: 5px;
-//             height: 18px;
+//             height: 18px;102
 //             position: relative;
 //             top: 2px;
 //             background-color: $primary;
@@ -81,50 +81,51 @@
     justify-content: center;
     margin-top: 16px;
     margin-bottom: 15px;
-  
+
     ul {
-      display: flex;
-      align-items: center;
+        display: flex;
+        align-items: center;
     }
-  
+
     li:first-child {
-      a {
-        margin-right: 12px;
-        padding-left: 0;
-      }
-  
-      a::before {
-        display: none;
-      }
+        a {
+            margin-right: 12px;
+            padding-left: 0;
+        }
+
+        a::before {
+            display: none;
+        }
     }
-  
+
     a {
-      position: relative;
-      padding-left: 15px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      text-transform: uppercase;
-      color: #212529;
-  
-      &:before {
-        content: '';
-        width: 1px;
-        height: 10.4px;
-        background-color: #212529;
-        display: block;
-        position: absolute;
-        top: 3px;
-        // left: 4px;
-        transform: skew(-20deg);
-  
-      }
+        position: relative;
+        padding-left: 15px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #212529;
+        font-family: "roboto-medium";
+
+        &:before {
+            content: '';
+            width: 1px;
+            height: 10.4px;
+            background-color: #212529;
+            display: block;
+            position: absolute;
+            top: 3px;
+            // left: 4px;
+            transform: skew(-20deg);
+
+        }
     }
-  
+
     .fa-home::before {
-      font-size: 20px;
+        font-size: 20px;
     }
-  }
+}
 
 // >  page-title
 .page-title {
@@ -241,10 +242,11 @@
     }
 }
 
-.topic-title{
+.topic-title {
     margin-top: $spacer-3;
     height: 28px;
     overflow: hidden;
+
     .item {
         display: inline-flex;
 
