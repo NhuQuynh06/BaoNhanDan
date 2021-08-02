@@ -53,18 +53,6 @@ $('.hero').slick({
 
 
 $('.box-style-10 .wrap-content').slick({
-    // dots: true,
-    // infinite: true,
-    // speed: 500,
-    // fade: !0,
-    // cssEase: 'linear',
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 8000,
-    // draggable: false,
-    // arrows: false
-
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

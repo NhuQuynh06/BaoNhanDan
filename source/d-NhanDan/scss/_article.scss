@@ -82,8 +82,8 @@
 
     .article__tag {
         border: none;
-        margin: 0;
         padding: 0;
+        margin-left: 189px;
 
         .box-heading {
             top: 0px;
@@ -984,7 +984,6 @@
                 font-family: "roboto-regular";
                 display: flex;
                 align-items: center;
-                height: 30px;
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 20px;
@@ -996,8 +995,6 @@
                 height: 44px;
 
                 &:hover {
-                    // background-color: $primary;
-                    // border-color: $primary;
                     color: $primary;
                 }
             }

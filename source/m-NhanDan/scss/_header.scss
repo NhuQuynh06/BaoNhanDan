@@ -73,17 +73,16 @@
 
 // > header
 .site-header {
-  // background-color: $primary;
   background: $third url(../img/bg-mobile.png) no-repeat;
   position: relative;
-  height: 369px;
   background-size: 100% 100%;
 
   &__body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    border-bottom: 1px solid #DB5663;
+    margin-bottom: 31px;
   }
 
   &__menu-button {
@@ -155,6 +154,56 @@
       cursor: pointer;
     }
 
+  }
+
+  &__banner {
+    padding-bottom: 22px;
+
+    .wrap-img {
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 27px;
+
+      img {
+        width: 100%;
+        position: absolute;
+      }
+    }
+
+    .heading {
+      text-align: center;
+
+      .text-1,
+      .text-2 {
+        display: block;
+      }
+
+      .text-1 {
+        font-family: 'myriad-semibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 4px;
+      }
+
+      .text-2 {
+        font-family: "myriad-cond";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
   }
 
   .bars {

@@ -22,6 +22,11 @@ if ($sliderContent) {
         slidesToScroll: 1,
         arrows: false,
         dots: false,
+        speed: 500,
+        fade: !0,
+        cssEase: 'linear',
+        autoplaySpeed: 8000,
+        draggable: false,
         asNavFor: '.slider-for',
     });
 
@@ -30,19 +35,18 @@ if ($sliderContent) {
 $('.chevron-wrap').click(function (e) {
     const $this = $(e.target);
     var id = $this.attr('data-link');
-    console.log(id)
     $('html, body').animate({ scrollTop: $('#' + id).offset().top }, 1000);
 });
 
-$('.dots').on('click', function() {
+$('.dots').on('click', function () {
     const prefix = 'chapter';
     var id = Number($(this).attr('data-link')) - 1;
     if (id <= 0) {
-        $('html, body').animate({ scrollTop: $('.container').offset().top }, 1000);
+        $('html, body').animate({ scrollTop: $('.box-style-1').offset().top }, 1000);
     } else {
         $('html, body').animate({ scrollTop: $('#' + prefix + id).offset().top }, 1000);
     }
-    
+
 });
 
 
@@ -91,4 +95,67 @@ $(window).scroll(function () {
         $('.wrap-dots .dots:first').addClass('active');
     }
 }).scroll();
+
+// height windown
+var h = window.innerHeight;
+// console.log('height windown',h);
+// $(".section-article-text .container" ).height(h);
+
+appendText('.sum-text');
+
+
+
+
+function getChildStr(arr, start, end) {
+    const temp = arr.filter(function(val, index){
+        return index >= start && index <= end;
+    })
+    return temp.join(' ');
+}
+
+function appendText(child) {
+    // $(".section-article-text .container").css("height", $(window).height());
+    var _this = $(child);
+    var arr = concatAfterDivision(_this.text().replace(/  +/g, ' ').trim().split(' '));
+    var _parent = _this.parent();
+    _parent.empty();
+    for (var i = 0; i < arr.length; i++) {
+        var content = '<div class="col-3">' + arr[i] + '</"col-3">';
+        console.log('sontent => ' + content);
+        // console.log('arr[i] => ', arr[i]);
+        _parent.append(content);
+    }
+
+}
+
+
+function concatAfterDivision(arr) {
+    var size = (arr.length / 4).toFixed(0);
+    // console.log('size => ' + size);
+    var result = [];
+    result.push(getChildStr(arr, 0, size - 1));
+    result.push(getChildStr(arr, size, size * 2 - 1));
+    result.push(getChildStr(arr, size * 2, size * 3 - 1));
+    result.push(getChildStr(arr, size * 3, arr.length - 1));
+    // console.log('result => ' + result[0]);
+    // console.log('result => ' + result[1]);
+    // console.log('result => ' + result[2]);
+    // console.log('result => ' + result[3]);
+    return result;
+}
+
+// $(".item.row").css("height", $(window).height());
+
+
+
+
+
+
+// const col = temp.slice(0, lenghtInCol);
+// const col2 = temp.slice(251, 250);
+// console.log(col);
+// console.log(col2);
+
+// console.log(Math.floor(temp.length/4));
+
 

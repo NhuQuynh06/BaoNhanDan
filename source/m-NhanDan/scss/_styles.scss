@@ -89,27 +89,31 @@
   }
 }
 
-// mixin font
+// mixin 
 
-@mixin roboto {
-  font-family: 'Roboto', sans-serif;
+@mixin padding-bt {
+ padding-bottom: 400px;
 }
 
-@mixin myriad-pro {
-  font-family: 'Myriad-Pro', serif;
-}
+// @mixin roboto {
+//   font-family: 'Roboto', sans-serif;
+// }
 
-@mixin noto-serif {
-  font-family: 'Noto Serif', serif;
-}
+// @mixin myriad-pro {
+//   font-family: 'Myriad-Pro', serif;
+// }
 
-@mixin playfair-display {
-  font-family: 'Playfair Display', serif;
-}
+// @mixin noto-serif {
+//   font-family: 'Noto Serif', serif;
+// }
 
-@mixin roboto-condensed {
-  font-family: 'Roboto Condensed', sans-serif;
-}
+// @mixin playfair-display {
+//   font-family: 'Playfair Display', serif;
+// }
+
+// @mixin roboto-condensed {
+//   font-family: 'Roboto Condensed', sans-serif;
+// }
 
 .story {
   a:hover {
@@ -210,7 +214,7 @@
       line-height: 24px;
       text-align: center;
       color: #212529;
-      @include noto-serif();
+      font-family: "noto-regular";
     }
   }
 
@@ -260,9 +264,10 @@
 
   .box-heading {
     text-align: center;
+    padding: 0 16px;
 
     a {
-      @include playfair-display();
+      font-family: "playfair-display";
       font-style: normal;
       font-weight: 900;
       font-size: 19px;
@@ -275,7 +280,6 @@
 
 
   .box-content {
-    // padding: 34px 0 76px;
     height: 435px;
     padding-top: 34px;
     padding-bottom: 45px;
@@ -288,6 +292,7 @@
       height: 92px;
       margin-bottom: -5px;
       padding: 10px 40px;
+      width: 375px;
 
       .rank-1 {
         width: 35px;
@@ -324,7 +329,7 @@
       width: 100%;
 
       a {
-        @include noto-serif();
+        font-family: "noto-normal";
         font-style: normal;
         font-weight: $font-weight-normal;
         font-size: 14px;
@@ -398,7 +403,7 @@
     margin-bottom: 15px;
 
     a {
-      @include playfair-display();
+      font-family: 'playfair-display';
       font-style: normal;
       font-weight: 900;
       font-size: 19px;
@@ -423,7 +428,7 @@
       }
 
       a {
-        @include noto-serif();
+        font-family: "noto-normal";
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -441,106 +446,106 @@
   }
 
 
-  .rank-1,
-  .rank-2 {
-    width: 510px;
+  // .rank-1,
+  // .rank-2 {
+  //   width: 510px;
 
 
-    a {
-      @include noto-serif();
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 20px;
-      color: #212529;
-      max-width: 245px;
-      position: relative;
+  //   a {
+  //     // @include noto-serif();
+  //     font-weight: 500;
+  //     font-size: 14px;
+  //     line-height: 20px;
+  //     color: #212529;
+  //     max-width: 245px;
+  //     position: relative;
 
-      &::before {
-        top: -15px;
-        position: absolute;
-        content: "";
-        width: 30px;
-        height: 12px;
-        background: #13C2CD;
-      }
-    }
-  }
+  //     &::before {
+  //       top: -15px;
+  //       position: absolute;
+  //       content: "";
+  //       width: 30px;
+  //       height: 12px;
+  //       background: #13C2CD;
+  //     }
+  //   }
+  // }
 
-  .rank-2 {
+  // .rank-2 {
 
-    .story:first-of-type {
-      padding-left: 181px;
-      margin-bottom: 64px;
+  //   .story:first-of-type {
+  //     padding-left: 181px;
+  //     margin-bottom: 64px;
 
-      a:before {
-        background-color: #FEAB2B;
-      }
-    }
+  //     a:before {
+  //       background-color: #FEAB2B;
+  //     }
+  //   }
 
-    .story:nth-child(2) {
-      padding-left: 270px;
-      margin-bottom: 64px;
-
-
-      a:before {
-        background-color: #0FADFB;
-      }
-    }
-
-    .story:nth-child(3) {
-      padding-left: 312px;
-      margin-bottom: 72px;
+  //   .story:nth-child(2) {
+  //     padding-left: 270px;
+  //     margin-bottom: 64px;
 
 
-      a:before {
-        background-color: #87FE38;
-      }
-    }
+  //     a:before {
+  //       background-color: #0FADFB;
+  //     }
+  //   }
 
-    .story:nth-child(4) {
-      padding-left: 255px;
+  //   .story:nth-child(3) {
+  //     padding-left: 312px;
+  //     margin-bottom: 72px;
 
-      a:before {
-        background-color: #C510F8;
-      }
-    }
-  }
 
-  .rank-1 {
-    .story:first-of-type {
-      padding-left: 132px;
-      margin-bottom: 47px;
+  //     a:before {
+  //       background-color: #87FE38;
+  //     }
+  //   }
 
-      a:before {
-        background-color: #13C2CD;
-      }
-    }
+  //   .story:nth-child(4) {
+  //     padding-left: 255px;
 
-    .story:nth-child(2) {
-      padding-left: 39px;
-      margin-bottom: 97px;
+  //     a:before {
+  //       background-color: #C510F8;
+  //     }
+  //   }
+  // }
 
-      a:before {
-        background-color: #E93918;
-      }
-    }
+  // .rank-1 {
+  //   .story:first-of-type {
+  //     padding-left: 132px;
+  //     margin-bottom: 47px;
 
-    .story:nth-child(3) {
-      margin-bottom: 81px;
+  //     a:before {
+  //       background-color: #13C2CD;
+  //     }
+  //   }
 
-      a:before {
-        background-color: #EFADCE;
-      }
-    }
+  //   .story:nth-child(2) {
+  //     padding-left: 39px;
+  //     margin-bottom: 97px;
 
-    .story:nth-child(4) {
-      padding-left: 57px;
+  //     a:before {
+  //       background-color: #E93918;
+  //     }
+  //   }
 
-      a:before {
-        background-color: #479F76;
-      }
-    }
-  }
+  //   .story:nth-child(3) {
+  //     margin-bottom: 81px;
+
+  //     a:before {
+  //       background-color: #EFADCE;
+  //     }
+  //   }
+
+  //   .story:nth-child(4) {
+  //     padding-left: 57px;
+
+  //     a:before {
+  //       background-color: #479F76;
+  //     }
+  //   }
+  // }
 }
 
 .box-style-4 {
@@ -558,7 +563,7 @@
       line-height: 29px;
       text-align: center;
       text-transform: uppercase;
-      @include playfair-display();
+      font-family: "playfair-display";
       color: #212529;
     }
   }
@@ -587,8 +592,8 @@
       }
 
       &__heading a {
-        @include noto-serif();
         font-style: normal;
+        font-family: "noto-normal";
         font-weight: $font-weight-normal;
         font-size: 14px;
         line-height: 20px;
@@ -628,9 +633,8 @@
   }
 
   .text-1 {
-    @include playfair-display();
     color: #212529;
-    font-weight: 900;
+    font-family: "playfair-display";
     margin-bottom: 12px;
     font-weight: 900;
     font-size: 19px;
@@ -638,8 +642,8 @@
   }
 
   .text-2 {
-    @include noto-serif();
     font-weight: $font-weight-bold;
+    font-family: "noto-normal";
     line-height: 20px;
     color: #495057;
     font-size: 12px;
@@ -670,7 +674,7 @@
         font-size: 14px;
         line-height: 22px;
         color: #212529;
-        @include noto-serif();
+        font-family: "noto-normal";
       }
     }
 
@@ -705,7 +709,7 @@
     }
 
     a {
-      @include myriad-pro();
+      // @include myriad-pro();
       font-weight: $font-weight-bold;
       font-size: 40px;
       line-height: 38px;
@@ -754,7 +758,7 @@
         // margin: 0 auto;
 
         a {
-          @include myriad-pro();
+          // @include myriad-pro();
           font-weight: $font-weight-bold;
           font-size: 30px;
           line-height: 36px;
@@ -766,8 +770,8 @@
       }
 
       &__summary {
-        @include noto-serif();
         font-weight: $font-weight-normal;
+        // @include noto-serif();
         font-size: 14px;
         line-height: 22px;
         text-align: center;
@@ -789,7 +793,7 @@
     }
 
     .heading {
-      @include roboto-condensed();
+      // @include roboto-condensed();
       font-weight: $font-weight-bold;
       font-size: 26px;
       line-height: 36px;
@@ -800,8 +804,8 @@
     }
 
     .sub-heading {
-      @include noto-serif();
       font-weight: $font-weight-bold;
+      // @include noto-serif();
       font-size: 16px;
       line-height: 24px;
       color: #212529;
@@ -810,8 +814,8 @@
     }
 
     p {
-      @include noto-serif();
       font-weight: $font-weight-normal;
+      // @include noto-serif();
       font-size: 16px;
       line-height: 24px;
       color: #212529;
@@ -898,7 +902,7 @@
     }
 
     &__heading a {
-      @include noto-serif();
+      // @include noto-serif();
       font-weight: $font-weight-normal;
       font-size: 14px;
       line-height: 20px;
@@ -949,7 +953,7 @@
     }
 
     &__heading a {
-      @include noto-serif();
+      // @include noto-serif();
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
@@ -990,7 +994,7 @@
     }
 
     a {
-      @include roboto-condensed();
+      // @include roboto-condensed();
       font-weight: $font-weight-bold;
       font-size: 36px;
       line-height: 42px;
@@ -1030,7 +1034,7 @@
   }
 
   .box-heading .article__title {
-    @include noto-serif();
+    // @include noto-serif();
     font-weight: bold;
     text-align: center;
     color: #212529;
@@ -1058,7 +1062,7 @@
     padding-bottom: 30px;
 
     a {
-      @include noto-serif();
+      // @include noto-serif();
       font-weight: $font-weight-bold;
       font-size: 36px;
       line-height: 46px;
@@ -1166,7 +1170,7 @@
   }
 
   .col-3 {
-    @include noto-serif();
+    // @include noto-serif();
     border-left: 1px solid #F5F7F8;
     font-weight: $font-weight-normal;
     font-size: 16px;

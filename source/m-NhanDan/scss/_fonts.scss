@@ -10,63 +10,62 @@
 * Playfair Display (normal)
 * Roboto Condensed (normal)
 */
+
 @font-face {
-    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+    font-family: 'roboto-medium';
+}
+
+@font-face {
     src: url('../fonts/Roboto/Roboto-Regular.ttf');
-    font-weight: 400;
-    font-weight: normal;
+    font-family: 'roboto-regular';
 }
-
 @font-face {
-    font-family: 'Roboto';
     src: url('../fonts/Roboto/Roboto-Bold.ttf');
-    font-weight: bold;
+    font-family: 'roboto-bold';
 }
-
-// end roboto
-
 @font-face {
-    font-family: 'Myriad-Pro';
-    src: url('../fonts/Myriad-pro/MYRIADPRO-REGULAR.OTF'),
-        url('../fonts/Myriad-pro/MYRIADPRO-REGULAR.woff');
-    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Black.ttf');
+    font-family: 'roboto-black';
 }
 
 @font-face {
-    font-family: 'Myriad-Pro';
-    src: url('../fonts/Myriad-pro/MYRIADPRO-BOLD.OTF');
-    font-weight: 400;
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-Bold.ttf');
+    font-family: 'robotoCond-bold';
 }
 
-// end Myriad-Pro
 
 
 @font-face {
-    font-family: 'Noto Serif';
-    src: url('../fonts/Noto_Serif/NotoSerif-Bold.ttf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Noto Serif';
     src: url('../fonts/Noto_Serif/NotoSerif-Regular.ttf');
-    font-weight: normal;
+    font-family: 'noto-regular';
+}
+@font-face {
+    src: url('../fonts/Noto_Serif/NotoSerif-Bold.ttf');
+    font-family: 'noto-bold';
 }
 
-// end Noto
 
 
 @font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf');
-    font-weight: 400;
+    src: url('../fonts/Myriad-pro/MyriadPro-SemiboldCond.otf');
+    font-family: 'myriad-semibold';
 }
 
-// end Playfair
+@font-face {
+    src: url('../fonts/Myriad-pro/MyriadPro-Cond.otf');
+    font-family: 'myriad-cond';
+}
+
+@font-face {
+    src: url('../fonts/Myriad-pro/MyriadPro-BoldCond.otf');
+    font-family: 'myriad-bold-cond';
+}
+
 
 
 @font-face {
-    font-family: 'Roboto Condensed';
-    src: url('../fonts/RobotoCondensed/RobotoCondensed-Regular.ttf');
-    font-weight: 400;
+    src: url('../fonts/PlayfairDisplay/static/PlayfairDisplay-Black.ttf');
+    font-family: 'playfair-display';
 }
+
