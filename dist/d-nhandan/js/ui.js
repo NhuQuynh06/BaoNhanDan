@@ -96,23 +96,15 @@ $(window).scroll(function () {
     }
 }).scroll();
 
-// height windown
+// text automation 
 var h = window.innerHeight;
-// console.log('height windown',h);
-// $(".section-article-text .container" ).height(h);
-
 appendText('.sum-text');
-
-
-
-
 function getChildStr(arr, start, end) {
-    const temp = arr.filter(function(val, index){
+    const temp = arr.filter(function (val, index) {
         return index >= start && index <= end;
     })
     return temp.join(' ');
 }
-
 function appendText(child) {
     // $(".section-article-text .container").css("height", $(window).height());
     var _this = $(child);
@@ -121,14 +113,10 @@ function appendText(child) {
     _parent.empty();
     for (var i = 0; i < arr.length; i++) {
         var content = '<div class="col-3">' + arr[i] + '</"col-3">';
-        console.log('sontent => ' + content);
-        // console.log('arr[i] => ', arr[i]);
         _parent.append(content);
     }
 
 }
-
-
 function concatAfterDivision(arr) {
     var size = (arr.length / 4).toFixed(0);
     // console.log('size => ' + size);
@@ -137,25 +125,14 @@ function concatAfterDivision(arr) {
     result.push(getChildStr(arr, size, size * 2 - 1));
     result.push(getChildStr(arr, size * 2, size * 3 - 1));
     result.push(getChildStr(arr, size * 3, arr.length - 1));
-    // console.log('result => ' + result[0]);
-    // console.log('result => ' + result[1]);
-    // console.log('result => ' + result[2]);
-    // console.log('result => ' + result[3]);
     return result;
 }
 
-// $(".item.row").css("height", $(window).height());
 
-
-
-
-
-
-// const col = temp.slice(0, lenghtInCol);
-// const col2 = temp.slice(251, 250);
-// console.log(col);
-// console.log(col2);
-
-// console.log(Math.floor(temp.length/4));
-
-
+// get height container 3-article-text
+var heightWindown = window.innerHeight - 160;
+// $(".section-article-text .box-style-10 .box-content").height(500);
+// $(".section-article-text .box-style-10 .slick-track").height(500);
+// $(".section-article-text .box-style-10 .item-slide").height(500);
+// $(".section-article-text .box-style-10 .col-3").height(500);
+console.log(heightWindown);

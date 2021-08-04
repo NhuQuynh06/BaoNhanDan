@@ -14,7 +14,7 @@
   right: 28px;
   top: 300px;
   z-index: 9;
-  top: 65%;
+  top: 70%;
   transform: translateY(-50%);
 
   .dots {
@@ -504,13 +504,14 @@ a:hover {
 
 
     a {
-      font-family: "noto-medium";
+      font-family: "noto-regular";
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
       color: #212529;
       max-width: 245px;
       position: relative;
+      pointer-events: none;
 
       &::before {
         top: -15px;
@@ -641,6 +642,7 @@ a:hover {
         color: #FFFFFF;
         position: relative;
         padding-top: 24px;
+        pointer-events: none;
 
         &:first-child {
           &::before {
@@ -748,7 +750,7 @@ a:hover {
         line-height: 22px;
         color: #212529;
         font-family: "noto-regular";
-        // @include noto-serif();
+        pointer-events: none;
       }
     }
 
@@ -944,18 +946,15 @@ a:hover {
       text-transform: uppercase;
       color: #212529;
       margin-bottom: 40px;
-      cursor: pointer;
     }
 
     .sub-heading {
-      // @include noto-serif();
       font-family: "noto-bold";
       font-weight: $font-weight-bold;
       font-size: 16px;
       line-height: 24px;
       color: #212529;
       margin-bottom: 22px;
-      cursor: pointer;
     }
 
     p {
@@ -1356,4 +1355,11 @@ a:hover {
       border-left: none;
     }
   }
+}
+
+.slice .container {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
 }

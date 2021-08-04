@@ -47,6 +47,7 @@
     .text-2 {
       color: $white;
       display: block;
+      pointer-events: none;
     }
 
     .text-1 {
@@ -193,6 +194,7 @@
         height: 100%;
         align-items: center;
         display: flex;
+        font-family: "roboto-regular";
 
         &:hover {
           background: $third;
