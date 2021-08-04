@@ -128,6 +128,17 @@ function concatAfterDivision(arr) {
 
 
 // get height container 3-article-text
-var heightWindown = window.innerHeight - 160;
-$(".section-article-text .box-style-10 .box-content").height(600);
-console.log(heightWindown);
+var heightWindown = window.innerHeight - 230;
+$(".section-article-text .box-style-10 .hidden").height(heightWindown);
+
+
+// make a button to scroll horizontally in div
+
+
+$('#slideNext').on('click', function (e) {
+    $('.hidden').animate({scrollLeft:'+=1160'},1000);
+});
+
+$('#slidePrev').on('click', function (e) {
+    $('.hidden').animate({scrollLeft:'-=1160'},1000);
+});
