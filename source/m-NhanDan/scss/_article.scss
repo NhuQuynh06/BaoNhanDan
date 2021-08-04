@@ -87,6 +87,10 @@
 
         .box-heading {
             top: 10px;
+
+            @media (min-width:768px) {
+                top: -1px;
+            }
         }
 
         .box-content {
