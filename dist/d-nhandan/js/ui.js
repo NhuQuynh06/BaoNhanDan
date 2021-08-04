@@ -53,31 +53,31 @@ $('.dots').on('click', function () {
 var nextButton2 = '<span class="slick-next"><img src="../figurations/site/arrow-right2.png" alt=""></span>'
 var prevButton2 = '<span class="slick-prev"><img src="../figurations/site/arrow-left2.png" alt=""></span>'
 
-$('.box-style-10 .slide').slick({
-    // dots: true,
-    infinite: true,
-    speed: 500,
-    fade: !0,
-    cssEase: 'linear',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 8000,
-    draggable: false,
-    arrows: true,
-    nextArrow: nextButton2,
-    prevArrow: prevButton2,
-});
+// $('.box-style-10 .slide').slick({
+//     // dots: true,
+//     infinite: true,
+//     speed: 500,
+//     fade: !0,
+//     cssEase: 'linear',
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     // autoplay: true,
+//     autoplaySpeed: 8000,
+//     draggable: false,
+//     arrows: true,
+//     nextArrow: nextButton2,
+//     prevArrow: prevButton2,
+// });
 
 
-$('.box-style-10 .wrap-content').slick({
+// $('.box-style-10 .wrap-content').slick({
 
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-});
+//     infinite: true,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     arrows: true,
+//     dots: false,
+// });
 
 //  Add Menu Active Class when scrolling to div
 $(window).scroll(function () {
@@ -106,20 +106,18 @@ function getChildStr(arr, start, end) {
     return temp.join(' ');
 }
 function appendText(child) {
-    // $(".section-article-text .container").css("height", $(window).height());
     var _this = $(child);
     var arr = concatAfterDivision(_this.text().replace(/  +/g, ' ').trim().split(' '));
     var _parent = _this.parent();
     _parent.empty();
     for (var i = 0; i < arr.length; i++) {
-        var content = '<div class="col-3">' + arr[i] + '</"col-3">';
+        var content = '<div class="col">' + arr[i] + '</div>';
         _parent.append(content);
     }
 
 }
 function concatAfterDivision(arr) {
     var size = (arr.length / 4).toFixed(0);
-    // console.log('size => ' + size);
     var result = [];
     result.push(getChildStr(arr, 0, size - 1));
     result.push(getChildStr(arr, size, size * 2 - 1));
@@ -131,8 +129,5 @@ function concatAfterDivision(arr) {
 
 // get height container 3-article-text
 var heightWindown = window.innerHeight - 160;
-// $(".section-article-text .box-style-10 .box-content").height(500);
-// $(".section-article-text .box-style-10 .slick-track").height(500);
-// $(".section-article-text .box-style-10 .item-slide").height(500);
-// $(".section-article-text .box-style-10 .col-3").height(500);
+$(".section-article-text .box-style-10 .box-content").height(600);
 console.log(heightWindown);

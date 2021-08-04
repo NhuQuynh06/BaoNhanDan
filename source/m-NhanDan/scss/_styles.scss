@@ -390,7 +390,7 @@
     height: 435px;
     padding-top: 34px;
     padding-bottom: 45px;
-    background: #f7f7f7 url(../img/bg-03.png) center 0px no-repeat;
+    background: #f7f7f7 url(../img/bg-04.png) center 12px no-repeat;
 
     .item {
       display: flex;
@@ -398,7 +398,7 @@
       margin: 0 auto;
       height: 92px;
       margin-bottom: -5px;
-      padding: 10px 40px;
+      padding: 10px 29px 10px 47px;
       width: 375px;
 
       .rank-1 {
@@ -896,6 +896,11 @@
       display: -webkit-box;
       -webkit-line-clamp: 7;
       -webkit-box-orient: vertical;
+      padding: 0 7px;
+
+      @media (min-width:425px) {
+        padding: 0;
+      }
     }
   }
 

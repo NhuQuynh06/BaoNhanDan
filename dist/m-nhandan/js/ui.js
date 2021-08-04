@@ -35,22 +35,6 @@ $('.chevron-wrap').click(function (e) {
 var nextButton2 = '<span class="slick-next"><img src="../figurations/site/arrow-right2.png" alt=""></span>'
 var prevButton2 = '<span class="slick-prev"><img src="../figurations/site/arrow-left2.png" alt=""></span>'
 
-// $('.hero').slick({
-//     // dots: true,
-//     infinite: true,
-//     speed: 500,
-//     fade: !0,
-//     cssEase: 'linear',
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     // autoplay: true,
-//     autoplaySpeed: 8000,
-//     draggable: false,
-//     arrows: true,
-//     nextArrow: nextButton2,
-//     prevArrow: prevButton2,
-// });
-
 
 $('.box-style-10 .wrap-content').slick({
     infinite: true,
