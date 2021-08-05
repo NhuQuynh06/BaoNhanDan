@@ -96,36 +96,6 @@ $(window).scroll(function () {
     }
 }).scroll();
 
-// text automation 
-var h = window.innerHeight;
-appendText('.sum-text');
-function getChildStr(arr, start, end) {
-    const temp = arr.filter(function (val, index) {
-        return index >= start && index <= end;
-    })
-    return temp.join(' ');
-}
-function appendText(child) {
-    var _this = $(child);
-    var arr = concatAfterDivision(_this.text().replace(/  +/g, ' ').trim().split(' '));
-    var _parent = _this.parent();
-    _parent.empty();
-    for (var i = 0; i < arr.length; i++) {
-        var content = '<div class="col">' + arr[i] + '</div>';
-        _parent.append(content);
-    }
-
-}
-function concatAfterDivision(arr) {
-    var size = (arr.length / 4).toFixed(0);
-    var result = [];
-    result.push(getChildStr(arr, 0, size - 1));
-    result.push(getChildStr(arr, size, size * 2 - 1));
-    result.push(getChildStr(arr, size * 2, size * 3 - 1));
-    result.push(getChildStr(arr, size * 3, arr.length - 1));
-    return result;
-}
-
 
 // get height container 3-article-text
 var heightWindown = window.innerHeight - 230;
@@ -142,3 +112,15 @@ $('#slideNext').on('click', function (e) {
 $('#slidePrev').on('click', function (e) {
     $('.hidden').animate({scrollLeft:'-=1160'},1000);
 });
+
+//  tính độ dài còn lại
+var heightText = document.querySelector('.text').offsetHeight;
+// var space = heightWindown - heightText
+// console.log("height text", heightText);
+// console.log("khoảng cách còn lại của 1 col", space);
+
+// $(".section-article-text .space").height(space);
+
+var space = document.querySelector('.space').offsetHeight;
+console.log(space +5 );
+
