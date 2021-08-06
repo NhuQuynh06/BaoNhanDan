@@ -53,32 +53,6 @@ $('.dots').on('click', function () {
 var nextButton2 = '<span class="slick-next"><img src="../figurations/site/arrow-right2.png" alt=""></span>'
 var prevButton2 = '<span class="slick-prev"><img src="../figurations/site/arrow-left2.png" alt=""></span>'
 
-// $('.box-style-10 .slide').slick({
-//     // dots: true,
-//     infinite: true,
-//     speed: 500,
-//     fade: !0,
-//     cssEase: 'linear',
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     // autoplay: true,
-//     autoplaySpeed: 8000,
-//     draggable: false,
-//     arrows: true,
-//     nextArrow: nextButton2,
-//     prevArrow: prevButton2,
-// });
-
-
-// $('.box-style-10 .wrap-content').slick({
-
-//     infinite: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     dots: false,
-// });
-
 //  Add Menu Active Class when scrolling to div
 $(window).scroll(function () {
     var windscroll = $(window).scrollTop();
@@ -99,28 +73,17 @@ $(window).scroll(function () {
 
 // get height container 3-article-text
 var heightWindown = window.innerHeight - 230;
-$(".section-article-text .box-style-10 .hidden").height(heightWindown);
+$(".section-article-text .box-style-10 .main-content").height(heightWindown);
 
 
 // make a button to scroll horizontally in div
 
 
-$('#slideNext').on('click', function (e) {
-    $('.hidden').animate({scrollLeft:'+=1160'},1000);
+$('.slideNext').on('click', function (e) {
+    $('.main-content').animate({scrollLeft:'+=1160'},1000);
 });
 
-$('#slidePrev').on('click', function (e) {
-    $('.hidden').animate({scrollLeft:'-=1160'},1000);
+$('.slidePrev').on('click', function (e) {
+    $('.main-content').animate({scrollLeft:'-=1160'},1000);
 });
-
-//  tính độ dài còn lại
-var heightText = document.querySelector('.text').offsetHeight;
-// var space = heightWindown - heightText
-// console.log("height text", heightText);
-// console.log("khoảng cách còn lại của 1 col", space);
-
-// $(".section-article-text .space").height(space);
-
-var space = document.querySelector('.space').offsetHeight;
-console.log(space +5 );
 

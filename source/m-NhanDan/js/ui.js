@@ -12,16 +12,33 @@ if ($sliderContent) {
     var prevButton = '<span class="slick-prev"><img src="../figurations/site/arrow-left.png" alt=""></span>'
 
     $('.box-style-6 .box-content').slick({
-        // centerPadding: '0',
         centerMode: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
         nextArrow: nextButton,
         prevArrow: prevButton,
-        centerPadding: '90px',
+        centerPadding: '60px',
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: '100px',
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: '0',
+                }
+            }
+        ]
     });
 }
 
