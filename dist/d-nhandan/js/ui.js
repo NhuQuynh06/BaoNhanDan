@@ -62,11 +62,11 @@ $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 // make a button to scroll horizontally in div
 
 
-$('#slideNext').on('click', function (e) {
+$('.slideNext').on('click', function (e) {
     $('.main-content').animate({scrollLeft:'+=1160'},1000);
 });
 
-$('#slidePrev').on('click', function (e) {
+$('.slidePrev').on('click', function (e) {
     $('.main-content').animate({scrollLeft:'-=1160'},1000);
 });
 
