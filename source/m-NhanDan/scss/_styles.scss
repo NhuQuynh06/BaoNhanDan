@@ -291,7 +291,7 @@
     .story {
 
       &:last-of-type {
-        margin-bottom: 62px;
+        margin-bottom: 35px;
       }
     }
 
@@ -348,7 +348,7 @@
 
 .box-style-2 {
   background: #F7F7F7;
-  padding: 120px 0 60px;
+  padding: 120px 0 400px;
 
   .box-heading {
     text-align: center;
@@ -370,8 +370,14 @@
   .box-content {
     height: 435px;
     padding-top: 34px;
-    padding-bottom: 45px;
-    background: #f7f7f7 url(../img/bg-04.png) center 12px no-repeat;
+    padding-bottom: 35px;
+    background: #f7f7f7 url(../img/bg-04.png) 53%/159% 92% no-repeat;
+
+
+    @media (min-width: 375px) {
+      background: #f7f7f7 url(../img/bg-04.png) center 12px no-repeat;
+
+    }
 
     .item {
       display: flex;
@@ -379,8 +385,13 @@
       margin: 0 auto;
       height: 92px;
       margin-bottom: -5px;
-      padding: 10px 29px 10px 47px;
-      width: 375px;
+      padding: 10px 32px 10px 30px;
+      width: 320px;
+
+      @media (min-width: 375px) {
+        padding: 10px 29px 10px 47px;
+        width: 375px;
+      }
 
       .rank-1 {
         width: 35px;
@@ -416,14 +427,18 @@
     .story {
       width: 100%;
 
-      a {
+      &__heading {
         font-family: "noto-regular";
         font-style: normal;
         font-weight: $font-weight-normal;
-        font-size: 14px;
         line-height: 20px;
         color: #212529;
         pointer-events: none;
+        font-size: 12px;
+
+        @media (min-width: 375px) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -485,7 +500,7 @@
 }
 
 .box-style-3 {
-  padding: 120px 0 180px;
+  padding: 120px 0 400px;
 
   .box-heading {
     text-align: center;
@@ -505,7 +520,7 @@
 
 
   .main-content {
-    margin-bottom: 22px;
+    margin-bottom: 35px;
 
     .story {
       margin-top: 20px;
@@ -518,7 +533,7 @@
         background: white;
       }
 
-      a {
+      &__heading {
         font-family: "noto-regular";
         font-style: normal;
         font-weight: normal;
@@ -661,8 +676,6 @@
   }
 
   .box-content {
-    margin-bottom: 32px;
-
     .story {
       width: 275px;
       text-align: center;
@@ -672,6 +685,14 @@
         padding-bottom: 20px;
         position: relative;
         margin-bottom: 15px;
+        font-style: normal;
+        font-family: "noto-regular";
+        font-weight: $font-weight-normal;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #212529;
+        pointer-events: none;
 
         &::after {
           content: '';
@@ -682,17 +703,6 @@
           right: 50%;
           top: 45px;
         }
-      }
-
-      &__heading a {
-        font-style: normal;
-        font-family: "noto-regular";
-        font-weight: $font-weight-normal;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-        color: #212529;
-        pointer-events: none;
       }
 
       &__thumb {
@@ -763,7 +773,7 @@
     .story {
       padding-left: 65px;
 
-      &__heading a {
+      &__heading {
         font-weight: $font-weight-normal;
         font-size: 14px;
         line-height: 22px;
@@ -774,7 +784,7 @@
     }
 
     .col-12:last-of-type {
-      margin-bottom: 37px;
+      margin-bottom: 35px;
     }
 
     .col-12 {
@@ -1222,22 +1232,30 @@
   }
 
   .rank-2 {
-    height: 500%;
+    height: 400%;
     -webkit-column-break-inside: avoid;
     position: relative;
+    background: #00ACEE;
+
+    @media (min-width: 768px) {
+      height: 200%;
+    }
 
     .box-style-9 {
       display: flex;
       position: absolute;
-      margin-left: 280px;
+      margin-left: -14px;
       padding-bottom: 200px;
       background: #fff url("../img/header.png") center -3px no-repeat;
-      padding-top: 80px;
+      padding-top: 0;
       overflow: hidden;
       text-overflow: ellipsis;
       margin-top: 0;
       margin-bottom: 0;
 
+      @media (min-width: 360px) {
+        padding-top: 0;
+      }
 
       @media (min-height: 800px) {
         background: #fff url("../img/header.png") center 20px no-repeat;
@@ -1273,15 +1291,32 @@
         }
 
         &__thumb {
-          width: 288px;
+          width: 286px;
+          height: 100%;
+
+          @media (min-width: 360px) {
+            width: 327px;
+          }
+
+          @media (min-width: 375px) {
+            width: 341px;
+          }
+
+          @media (min-width: 414px) {
+            width: 380px;
+          }
+
+          @media (min-width: 425px) {
+            width: 392px;
+          }
+
+          @media (min-width: 768px) {
+            width: 350px;
+          }
         }
 
         &__summary {
-          width: 252px;
           height: 100%;
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
           font-family: "roboto-regular";
 
           @media (min-height: 800px) {

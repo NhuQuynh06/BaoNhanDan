@@ -19,6 +19,7 @@
     height: 440px;
     background-size: 100%;
     width: 100%;
+    position: relative;
 
     @media (min-width:1441px) {
       height: 500px;
@@ -43,28 +44,30 @@
       width: 586px;
     }
 
-    .text-1,
-    .text-2 {
-      color: $white;
-      display: block;
-      pointer-events: none;
-    }
-
-    .text-1 {
+    .heading {
       text-transform: uppercase;
       font-weight: 600;
       font-size: 43px;
       line-height: 55px;
       margin-bottom: 5px;
       font-family: "myriad-semibold";
+      color: $white;
+      display: block;
+      pointer-events: none;
     }
-    
-    .text-2 {
+
+    .des {
+      color: $white;
+      display: block;
+      pointer-events: none;
       font-family: "myriad-cond";
       text-transform: capitalize;
       font-weight: $font-weight-normal;
-      font-size: 30px;
+      font-size: 20px;
       line-height: 20px;
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
     }
 
   }

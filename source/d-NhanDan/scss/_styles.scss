@@ -153,7 +153,7 @@
 // mixin font
 
 @mixin pd-bottom {
-  padding-top: 130px;
+  // m-top: 130px;
   padding-bottom: 300px;
 }
 
@@ -179,6 +179,13 @@ a:hover {
     justify-content: center;
     margin: 0 4px;
     position: relative;
+    color: white;
+    font-family: "roboto-medium";
+
+    &:hover {
+      color: white !important;
+    }
+
 
 
     i {
@@ -191,15 +198,6 @@ a:hover {
       }
     }
 
-    a {
-      color: white;
-      font-family: "roboto-medium";
-
-      &:hover {
-        color: white !important;
-      }
-
-    }
   }
 
   .fb {
@@ -404,7 +402,7 @@ a:hover {
       margin-right: 54px;
     }
 
-    .story a {
+    .story__heading {
       font-family: "noto-bold";
       font-style: normal;
       font-weight: $font-weight-bold;
@@ -471,8 +469,8 @@ a:hover {
 }
 
 .box-style-3 {
-  padding-top: 130px;
   @include pd-bottom();
+  padding-top: 130px;
 
   .box-heading {
     text-align: center;
@@ -503,7 +501,7 @@ a:hover {
     width: 510px;
 
 
-    a {
+    .story__heading {
       font-family: "noto-regular";
       font-weight: 500;
       font-size: 14px;
@@ -530,7 +528,7 @@ a:hover {
       padding-left: 181px;
       margin-bottom: 64px;
 
-      a:before {
+      .story__heading:before {
         background-color: #FEAB2B;
       }
     }
@@ -540,7 +538,7 @@ a:hover {
       margin-bottom: 64px;
 
 
-      a:before {
+      .story__heading:before {
         background-color: #0FADFB;
       }
     }
@@ -550,7 +548,7 @@ a:hover {
       margin-bottom: 72px;
 
 
-      a:before {
+      .story__heading:before {
         background-color: #87FE38;
       }
     }
@@ -558,7 +556,7 @@ a:hover {
     .story:nth-child(4) {
       padding-left: 255px;
 
-      a:before {
+      .story__heading:before {
         background-color: #C510F8;
       }
     }
@@ -569,7 +567,7 @@ a:hover {
       padding-left: 132px;
       margin-bottom: 47px;
 
-      a:before {
+      .story__heading:before {
         background-color: #13C2CD;
       }
     }
@@ -578,7 +576,7 @@ a:hover {
       padding-left: 39px;
       margin-bottom: 97px;
 
-      a:before {
+      .story__heading:before {
         background-color: #E93918;
       }
     }
@@ -586,7 +584,7 @@ a:hover {
     .story:nth-child(3) {
       margin-bottom: 81px;
 
-      a:before {
+      .story__heading:before {
         background-color: #EFADCE;
       }
     }
@@ -594,7 +592,7 @@ a:hover {
     .story:nth-child(4) {
       padding-left: 57px;
 
-      a:before {
+      .story__heading:before {
         background-color: #479F76;
       }
     }
@@ -602,7 +600,7 @@ a:hover {
 }
 
 .box-style-4 {
-  @include pd-bottom();
+  padding-bottom: 300px;
 
   .box-heading {
     background-color: #F8F9FA;
@@ -634,7 +632,7 @@ a:hover {
       width: 414px;
       position: absolute;
 
-      &__heading a {
+      &__heading .text {
         font-family: "noto-regular";
         font-weight: $font-weight-normal;
         font-size: 16px;
@@ -696,6 +694,7 @@ a:hover {
 
 .box-style-5 {
   @include pd-bottom();
+  padding-top: 130px;
 
   .box-heading {
     margin-bottom: 60px;
@@ -744,7 +743,7 @@ a:hover {
     .story {
       padding-left: 101px;
 
-      &__heading a {
+      &__heading {
         font-weight: $font-weight-normal;
         font-size: 14px;
         line-height: 22px;
@@ -1003,7 +1002,7 @@ a:hover {
     text-align: center;
     padding-bottom: 32px;
 
-    a {
+    .heading {
       font-family: "noto-bold";
       font-weight: $font-weight-bold;
       font-size: 36px;
@@ -1018,7 +1017,7 @@ a:hover {
     position: relative;
     overflow: hidden;
   }
-  
+
   .main-content {
     font-style: normal;
     font-weight: normal;
