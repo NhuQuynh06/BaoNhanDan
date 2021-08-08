@@ -764,221 +764,6 @@ a:hover {
   }
 }
 
-.box-style-6 {
-  padding-top: 130px;
-  margin-bottom: 64px;
-
-  .box-heading {
-    text-align: center;
-    position: relative;
-    padding-bottom: 28px;
-    margin-bottom: 35px;
-
-    &::after {
-      width: 248px;
-      height: 24px;
-      bottom: 0;
-      content: '';
-      position: absolute;
-      background: url(../img/vector-03.png) center no-repeat;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    a {
-      // @include myriad-pro();
-      font-family: "myriad-bold-cond";
-      font-weight: $font-weight-bold;
-      font-size: 40px;
-      line-height: 38px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #DC3545;
-    }
-  }
-
-  .rank-1 {
-    margin-bottom: 74px;
-    position: relative;
-    height: 460px;
-
-    &::before {
-      top: 95px;
-      position: absolute;
-      content: '';
-      width: 1056px;
-      height: 1px;
-      right: 50%;
-      transform: translateX(50%);
-      background: url(../img/line.png);
-    }
-
-    .story {
-      text-align: center;
-      width: 170px;
-      background: transparent;
-
-      &__thumb {
-        background: white;
-        width: 120px;
-        height: 120px;
-        margin: 0 auto;
-        margin-bottom: 54px;
-        margin-top: 35px;
-
-        a {
-          display: block;
-          position: relative;
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            opacity: 0.5;
-            border: 5px solid white;
-            border-radius: 50%;
-          }
-        }
-
-        img {
-          // border: 6px solid #DCDCDC;
-          border-radius: 50%;
-        }
-      }
-
-      &__heading {
-        margin-bottom: 16px;
-
-        a {
-          // @include myriad-pro();
-          font-family: "myriad-bold-cond";
-          font-weight: $font-weight-bold;
-          font-size: 30px;
-          line-height: 36px;
-          text-align: center;
-          color: #212529;
-          margin: 0 auto;
-
-        }
-      }
-
-      &__summary {
-        font-family: "noto-regular";
-        font-weight: $font-weight-normal;
-        font-size: 14px;
-        line-height: 22px;
-        text-align: center;
-        color: #212529;
-        width: 170px;
-        margin: 0 auto;
-      }
-    }
-
-
-    .slick-next,
-    .slick-prev {
-      position: absolute;
-      top: 50px;
-      padding: 15px;
-
-      img {
-        cursor: pointer;
-      }
-    }
-
-    .slick-next {
-      right: -40px;
-
-      &:hover {
-        animation: toRight 2s infinite;
-      }
-    }
-
-    .slick-prev {
-      left: -40px;
-
-      &:hover {
-        animation: toLeft 2s infinite;
-      }
-    }
-
-    .slick-list {
-      width: 1030px;
-      margin: 0 auto;
-    }
-
-    .slick-active {
-      width: 185px !important;
-    }
-
-    .slick-slide {
-      // padding: 0 18px;
-
-      &.slick-center {
-        width: 290px !important;
-
-        .story__thumb {
-          width: 190px;
-          height: 190px;
-          margin-bottom: 19px;
-          margin-top: 0;
-          transition: all 0.5s ease;
-        }
-      }
-    }
-
-
-  }
-
-  .rank-2 {
-    .col-7 {
-      padding-left: 58px;
-    }
-
-    .heading {
-      font-family: "robotoCond-bold";
-      font-weight: $font-weight-bold;
-      font-size: 26px;
-      line-height: 36px;
-      text-transform: uppercase;
-      color: #212529;
-      margin-bottom: 40px;
-    }
-
-    .sub-heading {
-      font-family: "noto-bold";
-      font-weight: $font-weight-bold;
-      font-size: 16px;
-      line-height: 24px;
-      color: #212529;
-      margin-bottom: 22px;
-    }
-
-    p {
-      // @include noto-serif();
-      font-family: "noto-regular";
-      font-weight: $font-weight-normal;
-      font-size: 16px;
-      line-height: 24px;
-      color: #212529;
-      margin-bottom: 25px;
-    }
-
-    .row {
-      display: flex !important;
-    }
-  }
-
-  .box-content {
-    position: relative;
-  }
-
-
-}
-
 // ==================================================================
 // ====================== category ==================================
 // ==================================================================
@@ -1208,6 +993,7 @@ a:hover {
 
 .box-style-10 {
   margin: 50px 0;
+  position: relative;
 
   p {
     color: #222222;
@@ -1230,18 +1016,9 @@ a:hover {
 
   .box-content {
     position: relative;
-  }
-
-}
-
-
-.box-style-10 {
-  position: relative;
-
-  .box-content {
     overflow: hidden;
   }
-
+  
   .main-content {
     font-style: normal;
     font-weight: normal;
@@ -1330,6 +1107,7 @@ a:hover {
   }
 
 }
+
 // style arrow
 .slideNext,
 .slidePrev {

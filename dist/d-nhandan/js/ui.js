@@ -53,23 +53,6 @@ $('.dots').on('click', function () {
 var nextButton2 = '<span class="slick-next"><img src="../figurations/site/arrow-right2.png" alt=""></span>'
 var prevButton2 = '<span class="slick-prev"><img src="../figurations/site/arrow-left2.png" alt=""></span>'
 
-//  Add Menu Active Class when scrolling to div
-$(window).scroll(function () {
-    var windscroll = $(window).scrollTop();
-    if (windscroll >= 100) {
-        $('.chapter').each(function (i) {
-            // The number at the end of the next line is how pany pixels you from the top you want it to activate.
-            if ($(this).position().top <= windscroll - 0) {
-                $('.wrap-dots .dots.active').removeClass('active');
-                $('.wrap-dots .dots').eq(i).addClass('active');
-            }
-        });
-    } else {
-        $('.wrap-dots .dots.active').removeClass('active');
-        $('.wrap-dots .dots:first').addClass('active');
-    }
-}).scroll();
-
 
 // get height container 3-article-text
 var heightWindown = window.innerHeight - 230;
@@ -79,11 +62,13 @@ $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 // make a button to scroll horizontally in div
 
 
-$('.slideNext').on('click', function (e) {
+$('#slideNext').on('click', function (e) {
     $('.main-content').animate({scrollLeft:'+=1160'},1000);
 });
 
-$('.slidePrev').on('click', function (e) {
+$('#slidePrev').on('click', function (e) {
     $('.main-content').animate({scrollLeft:'-=1160'},1000);
 });
+
+
 
