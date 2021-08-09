@@ -42,7 +42,7 @@
   animation-duration: 1s;
   display: none;
   position: absolute;
-  right: 16px;
+  right: 0;
   top: 40px;
   width: 280px;
   background: #DC3545;
@@ -199,7 +199,7 @@
 // mixin 
 
 @mixin padding-bt {
-  padding-bottom: 400px;
+  padding-bottom: 100px;
 }
 
 
@@ -348,7 +348,7 @@
 
 .box-style-2 {
   background: #F7F7F7;
-  padding: 120px 0 400px;
+  padding: 40px 0 100px;
 
   .box-heading {
     text-align: center;
@@ -500,7 +500,7 @@
 }
 
 .box-style-3 {
-  padding: 120px 0 400px;
+  padding: 40px 0 100px;
 
   .box-heading {
     text-align: center;
@@ -660,7 +660,7 @@
   background-color: #F7F7F7;
 
   .box-heading {
-    padding: 120px 0 10px;
+    padding: 40px 0 10px;
     text-align: center;
 
     a {
@@ -723,7 +723,7 @@
 }
 
 .box-style-5 {
-  padding-top: 120px;
+  padding-top: 40px;
   margin-bottom: 30px;
 
   .box-heading {
@@ -794,7 +794,7 @@
 }
 
 .box-style-6 {
-  padding-top: 120px;
+  padding-top: 40px;
   margin-bottom: 64px;
 
   .box-heading {
@@ -1080,6 +1080,10 @@
       font-size: 18px;
       line-height: 28px;
       margin-bottom: 8px;
+
+      @media (min-width: 414px) {
+        font-size: 20px;
+      }
     }
 
     &__summary {
@@ -1090,58 +1094,65 @@
       line-height: 22px;
       color: #6C757D;
       padding-left: 72px;
+
+      @media (min-width: 414px) {
+        font-size: 16px;
+      }
     }
   }
 }
 
 .box-style-9 {
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 
   .box-heading {
-    position: relative;
-    height: 60px;
-    text-align: center;
-    margin: 15px 0;
+    text-align: left;
+    padding-bottom: 0;
+    height: auto;
+    padding-bottom: 12px;
+
 
     &::before {
-      bottom: 0;
-      right: 50%;
-      transform: translateX(50%);
-      content: '';
-      background: url(../img/vector-04.png);
-      width: 183px;
-      height: 18px;
-      position: absolute
+      display: none;
+    }
+  }
+
+  .heading {
+    font-family: "robotoCond-bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #212529;
+  }
+
+  .box-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .story {
+    width: calc(50% - 8px);
+
+    &__thumb {
+      margin-bottom: 4px;
     }
 
     a {
-      // @include roboto-condensed();
-      font-weight: $font-weight-bold;
-      font-size: 36px;
-      line-height: 42px;
-      text-transform: uppercase;
+      font-family: "noto-bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 20px;
       color: #212529;
     }
   }
 
-  .box-content {
-    .story {
-      &__heading a {
-        font-style: $font-weight-normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 26px;
-        color: #212529;
-      }
-
-      &__thumb {
-        font-weight: $font-weight-normal;
-        font-size: 14px;
-        line-height: 20px;
-        color: #343A40;
-      }
-    }
+  .story:nth-child(-n+2) {
+    margin-bottom: 16px;
   }
 }
 
@@ -1151,8 +1162,19 @@
     margin-top: 16px;
   }
 
-  .main-content {
-    margin-bottom: 16px
+  >.main-content {
+    margin-bottom: 16px;
+
+    .box-heading {
+      @media (min-width: 375px) {
+        width: 343px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        width: auto;
+      }
+    }
   }
 
   .box-heading .article__title {
@@ -1163,6 +1185,10 @@
     font-size: 16px;
     line-height: 22px;
     text-transform: uppercase;
+
+    @media (min-width: 414px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -1180,21 +1206,21 @@
   }
 
   .box-social {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
 }
 
 .box-style-10 {
-  margin: 50px 0;
+  margin: 35px 0;
   position: relative;
 
   p {
     color: #222222;
   }
 
-  .box-heading {
+  >.box-heading {
     text-align: center;
-    padding-bottom: 32px;
+    padding-bottom: 16px;
 
     a {
       font-family: "noto-bold";
@@ -1210,124 +1236,10 @@
 
   }
 
-  .box-content {
-    position: relative;
-    overflow: hidden;
-  }
 
-  .main-content {
-    font-style: normal;
-    font-weight: normal;
+
+  .rank-1 {
     font-size: 16px;
-    line-height: 28px;
-    color: #222222;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
-    font-family: "noto-regular";
-    // column-width: 255px;
-    column-gap: 30px;
-    overflow-x: scroll;
-    column-rule: 1px solid #EFF1F3;
-  }
-
-  .rank-2 {
-    height: 400%;
-    -webkit-column-break-inside: avoid;
-    position: relative;
-    background: #00ACEE;
-
-    @media (min-width: 768px) {
-      height: 200%;
-    }
-
-    .box-style-9 {
-      display: flex;
-      position: absolute;
-      margin-left: -14px;
-      padding-bottom: 200px;
-      background: #fff url("../img/header.png") center -3px no-repeat;
-      padding-top: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-top: 0;
-      margin-bottom: 0;
-
-      @media (min-width: 360px) {
-        padding-top: 0;
-      }
-
-      @media (min-height: 800px) {
-        background: #fff url("../img/header.png") center 20px no-repeat;
-        padding-top: 115px;
-      }
-
-      @media (min-height: 850px) {
-        background: #fff url(../img/header.png) center 35px no-repeat;
-        padding-top: 130px;
-      }
-
-      @media (min-height: 900px) {
-        background: #fff url("../img/header.png") center 109px no-repeat;
-        padding-top: 200px;
-      }
-
-      .story {
-        margin: 0 16px;
-        height: 100%;
-
-        &__heading {
-          margin-top: 12px;
-          margin-bottom: 8px;
-
-          a {
-            font-family: "roboto-medium";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 26px;
-            color: #212529;
-          }
-        }
-
-        &__thumb {
-          width: 286px;
-          height: 100%;
-
-          @media (min-width: 360px) {
-            width: 327px;
-          }
-
-          @media (min-width: 375px) {
-            width: 341px;
-          }
-
-          @media (min-width: 414px) {
-            width: 380px;
-          }
-
-          @media (min-width: 425px) {
-            width: 392px;
-          }
-
-          @media (min-width: 768px) {
-            width: 350px;
-          }
-        }
-
-        &__summary {
-          height: 100%;
-          font-family: "roboto-regular";
-
-          @media (min-height: 800px) {
-            display: -webkit-box;
-            -webkit-line-clamp: inherit;
-            -webkit-box-orient: vertical;
-          }
-        }
-      }
-
-    }
   }
 
 }

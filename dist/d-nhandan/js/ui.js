@@ -1,36 +1,3 @@
-const $sliderContent = document.querySelector('.section-homepage')
-if ($sliderContent) {
-    var nextButton = '<span class="slick-next"><img src="../figurations/site/arrow-right.png" alt=""></span>'
-    var prevButton = '<span class="slick-prev"><img src="../figurations/site/arrow-left.png" alt=""></span>'
-
-    $('.box-style-6 .slider-for').slick({
-        centerPadding: '0',
-        centerMode: true,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        // autoplay: true,
-        nextArrow: nextButton,
-        prevArrow: prevButton,
-        asNavFor: '.slider-nav',
-    });
-    $('.box-style-6 .slider-nav').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        speed: 500,
-        fade: !0,
-        cssEase: 'linear',
-        autoplaySpeed: 8000,
-        draggable: false,
-        asNavFor: '.slider-for',
-    });
-
-}
 
 $('.chevron-wrap').click(function (e) {
     const $this = $(e.target);
@@ -48,11 +15,6 @@ $('.dots').on('click', function () {
     }
 
 });
-
-
-var nextButton2 = '<span class="slick-next"><img src="../figurations/site/arrow-right2.png" alt=""></span>'
-var prevButton2 = '<span class="slick-prev"><img src="../figurations/site/arrow-left2.png" alt=""></span>'
-
 
 // get height container 3-article-text
 var heightWindown = window.innerHeight - 230;
@@ -74,16 +36,16 @@ $('.slidePrev').on('click', function (e) {
 if (document.querySelector('.section-homepage')) {
     $(window).scroll(function () {
         var windscroll = $(window).scrollTop();
-        if (isInViewport(document.querySelector('.chevron1'))) {
-            element = document.querySelector('.chevron1');
-            domRect = element.getBoundingClientRect();
-            var spaceBelow = window.innerHeight - domRect.bottom;
-            if (spaceBelow >= 350) {
-                $('html, body').animate({ scrollTop: $('.chapter1').offset().top }, 1000);
-                element = document.querySelector('.chevron2');
-                domRect = element.getBoundingClientRect();
-            }
-        }
+        // if (isInViewport(document.querySelector('.chevron1'))) {
+        //     element = document.querySelector('.chevron1');
+        //     domRect = element.getBoundingClientRect();
+        //     var spaceBelow = window.innerHeight - domRect.bottom;
+        //     if (spaceBelow >= 350) {
+        //         $('html, body').animate({ scrollTop: $('.chapter1').offset().top }, 1000);
+        //         element = document.querySelector('.chevron2');
+        //         domRect = element.getBoundingClientRect();
+        //     }
+        // }
     
         if (windscroll >= 100) {
             $('.chapter').each(function (i) {
@@ -99,17 +61,19 @@ if (document.querySelector('.section-homepage')) {
         }
     }).scroll();
     
-    function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    // function isInViewport(el) {
+    //     const rect = el.getBoundingClientRect();
+    //     return (
+    //         rect.top >= 0 &&
+    //         rect.left >= 0 &&
+    //         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     
-        );
-    }
+    //     );
+    // }
 }
+
+//  dot
 
 
 
