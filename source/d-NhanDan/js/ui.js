@@ -71,16 +71,16 @@ $('.slidePrev').on('click', function (e) {
 });
 
 // auto scroll
-if ($('.section-homepage')) {
+if (document.querySelector('.section-homepage')) {
     $(window).scroll(function () {
         var windscroll = $(window).scrollTop();
-        if (isInViewport($('.chevron1'))) {
-            element = $('.chevron1');
+        if (isInViewport(document.querySelector('.chevron1'))) {
+            element = document.querySelector('.chevron1');
             domRect = element.getBoundingClientRect();
             var spaceBelow = window.innerHeight - domRect.bottom;
             if (spaceBelow >= 350) {
                 $('html, body').animate({ scrollTop: $('.chapter1').offset().top }, 1000);
-                element = $('.chevron2');
+                element = document.querySelector('.chevron2');
                 domRect = element.getBoundingClientRect();
             }
         }

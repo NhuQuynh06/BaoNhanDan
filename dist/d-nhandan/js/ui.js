@@ -71,46 +71,45 @@ $('.slidePrev').on('click', function (e) {
 });
 
 // auto scroll
-// if (document.querySelector('.section-homepage')) {
-//     let i = 1
-//     $(window).scroll(function () {
-//         var windscroll = $(window).scrollTop();
-//         if (isInViewport(document.querySelector('.chevron1'))) {
-//             element = document.querySelector('.chevron1');
-//             domRect = element.getBoundingClientRect();
-//             var spaceBelow = window.innerHeight - domRect.bottom;
-//             if (spaceBelow >= 350) {
-//                 $('html, body').animate({ scrollTop: $('.chapter1').offset().top }, 1000);
-//                 element = document.querySelector('.chevron2');
-//                 domRect = element.getBoundingClientRect();
-//             }
-//         }
+if (document.querySelector('.section-homepage')) {
+    $(window).scroll(function () {
+        var windscroll = $(window).scrollTop();
+        if (isInViewport(document.querySelector('.chevron1'))) {
+            element = document.querySelector('.chevron1');
+            domRect = element.getBoundingClientRect();
+            var spaceBelow = window.innerHeight - domRect.bottom;
+            if (spaceBelow >= 350) {
+                $('html, body').animate({ scrollTop: $('.chapter1').offset().top }, 1000);
+                element = document.querySelector('.chevron2');
+                domRect = element.getBoundingClientRect();
+            }
+        }
     
-//         if (windscroll >= 100) {
-//             $('.chapter').each(function (i) {
-//                 // The number at the end of the next line is how pany pixels you from the top you want it to activate.
-//                 if ($(this).position().top <= windscroll - 0) {
-//                     $('.wrap-dots .dots.active').removeClass('active');
-//                     $('.wrap-dots .dots').eq(i).addClass('active');
-//                 }
-//             });
-//         } else {
-//             $('.wrap-dots .dots.active').removeClass('active');
-//             $('.wrap-dots .dots:first').addClass('active');
-//         }
-//     }).scroll();
+        if (windscroll >= 100) {
+            $('.chapter').each(function (i) {
+                // The number at the end of the next line is how pany pixels you from the top you want it to activate.
+                if ($(this).position().top <= windscroll - 0) {
+                    $('.wrap-dots .dots.active').removeClass('active');
+                    $('.wrap-dots .dots').eq(i).addClass('active');
+                }
+            });
+        } else {
+            $('.wrap-dots .dots.active').removeClass('active');
+            $('.wrap-dots .dots:first').addClass('active');
+        }
+    }).scroll();
     
-//     function isInViewport(el) {
-//         const rect = el.getBoundingClientRect();
-//         return (
-//             rect.top >= 0 &&
-//             rect.left >= 0 &&
-//             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     
-//         );
-//     }
-// }
+        );
+    }
+}
 
 
 
