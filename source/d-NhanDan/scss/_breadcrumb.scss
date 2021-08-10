@@ -6,81 +6,10 @@
 *
 * breadcrumb
 */
-// >  breadcrumb
-// .breadcrumb {
-//     @include clearfix();
-//     display: flex;
-//     margin-bottom: $spacer-2;
-//     margin-top: $spacer-3;
-
-//     .main-cate {
-//         display: inline-flex;
-
-//         &:before {
-//             content: '';
-//             width: 5px;
-//             height: 18px;
-//             position: relative;
-//             top: 2px;
-//             background-color: $primary;
-//         }
-
-//         a {
-//             height: 25px;
-//             @include text-uppercase-1;
-//             position: relative;
-//             display: flex;
-//             padding: $spacer-10 $spacer-3 $spacer-10 $spacer-2;
-//             color: $gray-900 !important;
-
-//             >* {
-//                 font-weight: 800;
-//                 font-size: inherit;
-//             }
-//         }
-//     }
-
-//     .cate {
-//         position: relative;
-
-//         &:before {
-//             content: '';
-//             width: 1px;
-//             height: 18px;
-//             position: absolute;
-//             top: 2px;
-//             left: 0px;
-//             background-color: $gray-500;
-//         }
-
-//         a {
-//             height: 25px;
-//             display: flex;
-//             font-size: 16px;
-//             position: relative;
-//             padding: $spacer-10 $spacer-3 $spacer-10 $spacer-2;
-
-//             >* {
-//                 font-size: inherit;
-//             }
-
-//             &:hover {
-//                 color: $primary;
-//             }
-//         }
-//     }
-
-//     .is-active {
-//         a {
-//             color: $primary;
-//         }
-//     }
-// }
 .breadcrumb {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 48px;
+    margin-top: 50px;
   
     ul {
       display: flex;

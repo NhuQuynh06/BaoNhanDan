@@ -142,6 +142,7 @@
 
     .strong-text {
         font-family: "noto-bold";
+        margin-top: 16px;
         font-weight: $font-weight-bold;
         font-size: 16px;
         line-height: 22px;
@@ -598,12 +599,18 @@
     }
 
     &__title {
-        margin-top: $spacer-1;
-        font-size: 3.2rem;
-        font-weight: $font-weight-bold;
-        color: $gray-500;
-        line-height: 38px;
-        margin-bottom: 16px
+        font-family: "noto-bold";
+        font-weight: bold;
+        text-align: center;
+        color: #212529;
+        font-size: 16px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-top: 16px;
+
+        @media (min-width: 414px) {
+            font-size: 18px;
+        }
     }
 
     &__meta {

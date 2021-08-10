@@ -20,6 +20,7 @@
     background-size: 100%;
     width: 100%;
     position: relative;
+    margin-top: 44px;
 
     @media (min-width:1441px) {
       height: 500px;
@@ -73,10 +74,14 @@
   }
 
   &__navigation {
-    background-color: $white;
+    background-color: #fff;
     height: 44px;
     display: flex;
     align-items: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
 
     ul.menu {
       display: flex;
@@ -181,7 +186,7 @@
       display: none;
       position: absolute;
       width: 200px;
-      background: $white;
+      background: $third;
       z-index: 1;
       padding: 0;
       margin: 0;
@@ -192,7 +197,7 @@
         line-height: 3.4rem;
         font-weight: 500;
         padding: 0 8px;
-        color: #222;
+        color: white;
         white-space: nowrap;
         height: 100%;
         align-items: center;
@@ -200,8 +205,8 @@
         font-family: "roboto-regular";
 
         &:hover {
-          background: $third;
-          color: $white !important;
+          background: white;
+          color: $third !important;
         }
       }
     }

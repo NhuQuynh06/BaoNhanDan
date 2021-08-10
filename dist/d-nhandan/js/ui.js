@@ -17,7 +17,7 @@ $('.dots').on('click', function () {
 });
 
 // get height container 3-article-text
-var heightWindown = window.innerHeight - 230;
+var heightWindown = window.innerHeight - 270;
 $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 
 

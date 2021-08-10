@@ -81,8 +81,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #DB5663;
-    margin-bottom: 31px;
+    border-bottom: 1px solid #db5663;
+    background: #cc2b3b;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
   }
 
   &__menu-button {
@@ -158,6 +162,7 @@
 
   &__banner {
     padding-bottom: 22px;
+    padding-top: 70px;
 
     .wrap-img {
       margin: 0 auto;

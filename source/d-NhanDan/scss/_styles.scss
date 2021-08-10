@@ -163,6 +163,7 @@ a:hover {
 .box-social {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
 
   button {
     width: 120px;
@@ -855,7 +856,6 @@ a:hover {
 .box-style-8 {
   width: 632px;
   margin: 0 auto;
-  margin-bottom: 36px;
   margin-top: 28px;
   padding: 16px 0;
   border-top: 1px solid #DEE2E6;
@@ -954,13 +954,23 @@ a:hover {
 }
 
 .section-article {
-  .breadcrumb {
-    margin-bottom: 16px;
-    margin-top: 50px;
-  }
 
   .main-content {
     margin: 0 auto;
+  }
+
+  .sub-title {
+    font-family: "noto-bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #DC3545;
+    width: 760px;
+    margin: 0 auto;
+    margin-top: 16px;
   }
 
   .box-heading .article__title {
@@ -971,7 +981,10 @@ a:hover {
     line-height: 46px;
     text-align: center;
     color: #212529;
-    margin-bottom: 16px;
+  }
+
+  .article {
+    margin-top: 36px;
   }
 }
 

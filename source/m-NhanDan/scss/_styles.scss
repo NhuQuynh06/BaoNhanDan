@@ -6,22 +6,22 @@
 .hamburger {
   cursor: pointer;
   display: block;
-  padding: 7px 16px;
+  padding: 3px 16px;
 }
 
 .line {
   display: block;
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+  margin: 3px 0;
   opacity: 1;
-  transition: 0.3s all;
+  transition: .3s all;
 }
 
 .animation {
   .line:nth-child(1) {
-    transform: translateY(9px)rotate(45deg);
+    transform: translateY(5px)rotate(45deg);
     transition: 0.3s all;
   }
 
@@ -31,7 +31,7 @@
   }
 
   .line:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-5px) rotate(-45deg);
     transition: 0.3s all;
   }
 }
@@ -43,9 +43,9 @@
   display: none;
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 28px;
   width: 280px;
-  background: #DC3545;
+  background: #dc3545;
   margin-top: 12px;
   z-index: 1;
 
@@ -212,6 +212,7 @@
 .box-social {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
 
   button {
     width: 40px;
@@ -374,7 +375,12 @@
     background: #f7f7f7 url(../img/bg-04.png) 53%/159% 92% no-repeat;
 
 
-    @media (min-width: 375px) {
+    @media (min-width: 425px) {
+      background: #f7f7f7 url(../img/bg-04.png) -79px 12px no-repeat;
+
+    }
+
+    @media (min-width: 768px) {
       background: #f7f7f7 url(../img/bg-04.png) center 12px no-repeat;
 
     }
@@ -385,12 +391,16 @@
       margin: 0 auto;
       height: 92px;
       margin-bottom: -5px;
-      padding: 10px 32px 10px 30px;
+      padding: 10px 25px 10px 29px;
       width: 320px;
 
       @media (min-width: 375px) {
-        padding: 10px 29px 10px 47px;
+        padding: 10px 34px 10px 36px;
         width: 375px;
+      }
+
+      @media (min-width: 425px) {
+        padding: 10px 28px 10px 45px;
       }
 
       .rank-1 {
@@ -986,7 +996,7 @@
 // ==================================================================
 
 .box-style-7 {
-  margin-bottom: 23px;
+  margin-bottom: 18px;
 
   .row {
     margin-bottom: 28px;
@@ -994,17 +1004,18 @@
 
 
   .story {
-    margin-bottom: 20px;
+    margin-top: 20px;
 
-    &:last-of-type {
-      margin-bottom: 23px;
-    }
+    // &:last-of-type {
+    //   margin-bottom: 23px;
+    // }
 
     &__thumb {
-      width: 80px;
-      height: 60px;
+      width: 120px;
+      height: 90px;
       float: left;
       margin-right: 12px;
+      border-radius: 4px;
 
       @media (min-width: 768px) {
         width: 200px;
@@ -1013,7 +1024,6 @@
 
       img {
         display: block;
-        border-radius: 4px;
         height: 100%
       }
 
@@ -1031,7 +1041,7 @@
 
   .btn-pri {
     border-radius: 4px;
-    margin-bottom: 48px;
+    margin-top: 23px;
 
     a {
       height: 34px;
@@ -1053,7 +1063,6 @@
 
 .box-style-8 {
   margin: 0 auto;
-  margin-bottom: 16px;
   margin-top: 16px;
   padding: 16px 0;
   border-top: 1px solid #DEE2E6;
@@ -1157,9 +1166,15 @@
 }
 
 .section-article {
-  .breadcrumb {
-    margin-bottom: 16px;
+  .sub-title {
     margin-top: 16px;
+    font-family: "noto-bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #DC3545;
   }
 
   >.main-content {
@@ -1177,19 +1192,7 @@
     }
   }
 
-  .box-heading .article__title {
-    font-family: "noto-bold";
-    font-weight: bold;
-    text-align: center;
-    color: #212529;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: uppercase;
 
-    @media (min-width: 414px) {
-      font-size: 18px;
-    }
-  }
 }
 
 // ==================================================================
