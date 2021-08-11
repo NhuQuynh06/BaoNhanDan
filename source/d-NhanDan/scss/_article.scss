@@ -11,62 +11,12 @@
 */
 // mixin font
 
-// @mixin roboto {
-//     font-family: 'Roboto', sans-serif;
-// }
-
-// @mixin myriad-pro {
-//     font-family: 'Myriad-Pro', serif;
-// }
-
-// @mixin noto-serif {
-//     font-family: 'Noto Serif', serif;
-// }
-
-// @mixin playfair-display {
-//     font-family: 'Playfair Display', serif;
-// }
-
-// @mixin roboto-condensed {
-//     font-family: 'Roboto Condensed', sans-serif;
-// }
-
 // 03-article
 .section-article {
     .time {
         color: $gray-600;
     }
 
-    .box-heading {
-        // width: 100%;
-
-        .article__title {
-            // margin-top: -3px;
-        }
-    }
-
-    // .box-style-9 {
-    //     .box-heading {
-
-    //         .heading-focus {
-    //             color: black;
-    //         }
-    //     }
-
-    //     .box-content {
-    //         .row.justify-content-between:first-child {
-    //             margin-bottom: 5px;
-    //         }
-
-    //         .story {
-    //             &__heading {
-    //                 font-size: 16px;
-    //                 font-weight: $font-weight-medium;
-    //                 margin: 8px 0;
-    //             }
-    //         }
-    //     }
-    // }
 
     .box-style-9+.box-style-3 {
         margin-top: 10px;

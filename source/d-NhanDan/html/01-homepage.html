@@ -101,7 +101,7 @@
         <div class="dots" data-link="5"></div>
       </div>
       <div class="container">
-        <div class="chapter box-style-1">
+        <div class="chapter box-style-1" id="chapter1">
           <div class="box-heading">
             <img src="../figurations/site/bua-liem.png" alt="">
           </div>
@@ -137,7 +137,7 @@
                 </button>
               </div>
             </div>
-            <div class="chevron-wrap chevron1" data-link="chapter1">
+            <div class="chevron-wrap chevron1 chapterbtn" data-link="2" id="chapterbtn1">
               <div class="chevron"></div>
               <div class="chevron"></div>
               <div class="chevron"></div>
@@ -145,7 +145,7 @@
           </div>
         </div>
       </div>
-      <div class="chapter box-style-2 chapter1" id="chapter1">
+      <div class="chapter box-style-2" id="chapter2">
         <div class="box-heading">
           <h3>
             <a href="#" title="">
@@ -202,7 +202,7 @@
               Xem Chi tiết bài viết
             </a>
           </button>
-          <div class="chevron-wrap chevron2" data-link="chapter2">
+          <div class="chevron-wrap chevron2" data-link="3" id="chapterbtn2">
             <div class="chevron"></div>
             <div class="chevron"></div>
             <div class="chevron"></div>
@@ -210,7 +210,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="chapter box-style-3 chapter2" id="chapter2">
+        <div class="chapter box-style-3" id="chapter3">
           <div class="box-heading">
             <h3>
               <a href="#">
@@ -287,7 +287,7 @@
                 Xem Chi tiết bài viết
               </a>
             </button>
-            <div class="chevron-wrap chevron3" data-link="chapter3">
+            <div class="chevron-wrap chevron3 chapterbtn" data-link="4" id="chapterbtn3">
               <div class="chevron"></div>
               <div class="chevron"></div>
               <div class="chevron"></div>
@@ -295,7 +295,7 @@
           </div>
         </div>
       </div>
-      <div class="chapter box-style-4 chapter3" id="chapter3">
+      <div class="chapter box-style-4" id="chapter4">
         <div class="box-heading">
           <h3>
             <a href="#">
@@ -307,7 +307,7 @@
           <div class="rank-1" class="story"
             data-anijs="if: scroll, on: window, do: fadeInRightBig animated, before: scrollReveal">
             <div class="container">
-              <img src="../figurations/site/img-left.png" alt="">
+              <div class="wrap-img"></div>
               <article class="story">
                 <h5 class="story__heading">
                   <p class="text">
@@ -348,14 +348,15 @@
                   </p>
                 </h5>
               </article>
-              <img src="../figurations/site/img-right.png" alt="">
+              <div class="wrap-img"></div>
+
             </div>
           </div>
           <button class="btn-pri"> <a href="#">
               Xem Chi tiết bài viết
             </a>
           </button>
-          <div class="chevron-wrap chevron4" data-link="chapter4">
+          <div class="chevron-wrap chevron4 chapterbtn" data-link="5" id="chapterbtn4">
             <div class="chevron"></div>
             <div class="chevron"></div>
             <div class="chevron"></div>
@@ -363,7 +364,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="chapter box-style-5 chapter4" id="chapter4">
+        <div class="chapter box-style-5" id="chapter5">
           <div class="box-heading">
             <h3>
               <a href="#" class="text-1">
@@ -378,78 +379,53 @@
               <img src="../figurations/site/image-01.png" alt="">
             </div>
             <div class="row">
-              <div class="col-4" data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
-                <img src="../figurations/site/1.png" alt="" class="stt">
-                <article class="story">
-                  <h5 class="story__heading">
+              <article class="story col-4"
+                data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
+                <figure class="story__thumb"></figure>
+                <h5 class="story__heading">
 
-                    Kinh tế thị trường định hướng xã hội chủ nghĩa là nền kinh tế thị trường hiện đại, hội nhập quốc
-                    tế, vận hành đầy đủ, đồng bộ theo các quy luật của kinh tế thị trường, có sự quản lý của nhà nước
-                    pháp quyền xã hội chủ nghĩa, do Đảng Cộng sản Việt Nam lãnh đạo; bảo đảm định hướng xã hội chủ
-                    nghĩa, nhằm mục tiêu dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh.
+                  Kinh tế thị trường định hướng xã hội chủ nghĩa là nền kinh tế thị trường hiện đại, hội nhập quốc
+                  tế, vận hành đầy đủ, đồng bộ theo các quy luật của kinh tế thị trường, có sự quản lý của nhà nước
+                  pháp quyền xã hội chủ nghĩa, do Đảng Cộng sản Việt Nam lãnh đạo; bảo đảm định hướng xã hội chủ
+                  nghĩa, nhằm mục tiêu dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh.
 
-                  </h5>
-                </article>
-              </div>
-              <div class="col-4" data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
-                <img src="../figurations/site/2.png" alt="" class="stt">
-                <article class="story">
-                  <h5 class="story__heading">
-
-                    Một kiểu tổ chức kinh tế vừa tuân theo những quy luật của kinh tế thị trường vừa dựa trên cơ sở và
-                    được dẫn dắt, chi phối bởi các nguyên tắc và bản chất của chủ nghĩa xã hội, thể hiện trên cả ba
-                    mặt: Sở hữu, tổ chức quản lý và phân phối.
-
-                  </h5>
-                </article>
-              </div>
-              <div class="col-4" data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
-                <img src="../figurations/site/3.png" alt="" class="stt">
-                <article class="story">
-                  <h5 class="story__heading">
-
-                    Đây không phải là nền kinh tế thị trường tư bản chủ nghĩa và cũng chưa phải là nền kinh tế thị
-                    trường xã hội chủ nghĩa đầy đủ (vì nước ta còn đang trong thời kỳ quá độ).
-
-                  </h5>
-                </article>
-              </div>
-              <div class="col-4" data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
-                <img src="../figurations/site/4.png" alt="" class="stt">
-                <article class="story">
-                  <h5 class="story__heading">
-
-                    Trong nền kinh tế thị trường định hướng xã hội chủ nghĩa có nhiều hình thức sở hữu, nhiều thành
-                    phần kinh tế. Các thành phần kinh tế hoạt động theo pháp luật đều là bộ phận hợp thành quan trọng
-                    của nền kinh tế, bình đẳng trước pháp luật cùng phát triển lâu dài, hợp tác và cạnh tranh lành
-                    mạnh.
-
-                  </h5>
-                </article>
-              </div>
-              <div class="col-4" data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
-                <img src="../figurations/site/5.png" alt="" class="stt">
-                <article class="story">
-                  <h5 class="story__heading">
-
-                    Quan hệ phân phối bảo đảm công bằng và tạo động lực cho phát triển; thực hiện chế độ phân phối chủ
-                    yếu theo kết quả lao động, hiệu quả kinh tế, đồng thời theo mức đóng góp vốn cùng các nguồn lực
-                    khác và phân phối thông qua hệ thống an sinh xã hội, phúc lợi xã hội.
-
-                  </h5>
-                </article>
-              </div>
-              <div class="col-4" data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
-                <img src="../figurations/site/6.png" alt="" class="stt">
-                <article class="story">
-                  <h5 class="story__heading">
-
-                    Nhà nước quản lý nền kinh tế bằng pháp luật, chiến lược, quy hoạch, kế hoạch, chính sách và lực
-                    lượng vật chất để định hướng, điều tiết, thúc đẩy phát triển kinh tế - xã hội.
-
-                  </h5>
-                </article>
-              </div>
+                </h5>
+              </article>
+              <article class="story col-4"
+                data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
+                <figure class="story__thumb"></figure>
+                <h5 class="story__heading">
+                  Một kiểu tổ chức kinh tế vừa tuân theo những quy luật của kinh tế thị trường vừa dựa trên cơ sở và được dẫn dắt, chi phối bởi các nguyên tắc và bản chất của chủ nghĩa xã hội, thể hiện trên cả ba mặt: Sở hữu, tổ chức quản lý và phân phối. 
+                </h5>
+              </article>
+              <article class="story col-4"
+                data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
+                <figure class="story__thumb"></figure>
+                <h5 class="story__heading">
+                  Đây không phải là nền kinh tế thị trường tư bản chủ nghĩa và cũng chưa phải là nền kinh tế thị trường xã hội chủ nghĩa đầy đủ (vì nước ta còn đang trong thời kỳ quá độ).
+                </h5>
+              </article>
+              <article class="story col-4"
+                data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
+                <figure class="story__thumb"></figure>
+                <h5 class="story__heading">
+                  Trong nền kinh tế thị trường định hướng xã hội chủ nghĩa có nhiều hình thức sở hữu, nhiều thành phần kinh tế. Các thành phần kinh tế hoạt động theo pháp luật đều là bộ phận hợp thành quan trọng của nền kinh tế, bình đẳng trước pháp luật cùng phát triển lâu dài, hợp tác và cạnh tranh lành mạnh. 
+                </h5>
+              </article>
+              <article class="story col-4"
+                data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
+                <figure class="story__thumb"></figure>
+                <h5 class="story__heading">
+                  Quan hệ phân phối bảo đảm công bằng và tạo động lực cho phát triển; thực hiện chế độ phân phối chủ yếu theo kết quả lao động, hiệu quả kinh tế, đồng thời theo mức đóng góp vốn cùng các nguồn lực khác và phân phối thông qua hệ thống an sinh xã hội, phúc lợi xã hội.
+                </h5>
+              </article>
+              <article class="story col-4"
+                data-anijs="if: scroll, on: window, do: fadeInUpBig animated, before: scrollReveal">
+                <figure class="story__thumb"></figure>
+                <h5 class="story__heading">
+                  Nhà nước quản lý nền kinh tế bằng pháp luật, chiến lược, quy hoạch, kế hoạch, chính sách và lực lượng vật chất để định hướng, điều tiết, thúc đẩy phát triển kinh tế - xã hội.
+                </h5>
+              </article>
             </div>
             <button class="btn-pri"> <a href="#">
                 Xem Chi tiết bài viết
@@ -476,9 +452,7 @@
     </footer>
   </div>
   <!-- JS Global Compulsory -->
-  <script src="../js/jquery-3.1.1.js"></script>
-  <script src="../js/vendor/slick.min.js"></script>
-
+  <script src="../js/jquery.min.js"></script>
   <!-- AniJS core library -->
   <script src="../js/anijs-min.js"></script>
   <script src="../js/anijs-helper-scrollreveal-min.js"></script>

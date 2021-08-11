@@ -855,23 +855,6 @@
     }
   }
 
-  // .rank-1 {
-  //   margin-bottom: 74px;
-  //   position: relative;
-  //   height: 460px;
-
-  //   &::before {
-  //     top: 95px;
-  //     position: absolute;
-  //     content: '';
-  //     width: 1055px;
-  //     border-bottom: 1px dashed #ADB5BD;
-  //     right: 50%;
-  //     transform: translateX(50%);
-  //   }
-
-
-  // }
 
   .story {
     text-align: center;
@@ -886,7 +869,6 @@
       margin-bottom: 54px;
 
       img {
-        // border: 6px solid #DCDCDC;
         border-radius: 50%;
       }
     }
@@ -927,81 +909,15 @@
     }
   }
 
-  // .rank-2 {
-  //   .col-7 {
-  //     padding-left: 58px;
-  //   }
-
-  //   .heading {
-  //     // @include roboto-condensed();
-  //     font-weight: $font-weight-bold;
-  //     font-size: 26px;
-  //     line-height: 36px;
-  //     text-transform: uppercase;
-  //     color: #212529;
-  //     margin-bottom: 40px;
-  //     cursor: pointer;
-  //   }
-
-  //   .sub-heading {
-  //     font-weight: $font-weight-bold;
-  //     // @include noto-serif();
-  //     font-size: 16px;
-  //     line-height: 24px;
-  //     color: #212529;
-  //     margin-bottom: 22px;
-  //     cursor: pointer;
-  //   }
-
-  //   p {
-  //     font-weight: $font-weight-normal;
-  //     // @include noto-serif();
-  //     font-size: 16px;
-  //     line-height: 24px;
-  //     color: #212529;
-  //     margin-bottom: 25px;
-  //   }
-  // }
-
   .box-content {
     position: relative;
   }
 
-  // .slick-next,
-  // .slick-prev {
-  //   position: absolute;
-  //   top: 65px;
-
-  //   img {
-  //     cursor: pointer;
-  //   }
-  // }
-
-  // .slick-next {
-  //   right: -40px;
-  // }
-
-  // .slick-prev {
-  //   left: -40px;
-  // }
-
-  // .slick-list {
-  //   width: 1030px;
-  //   margin: 0 auto;
-  // }
-
-  // .slick-active {
-  //   width: 185px !important;
-  // }
 
   .slick-slide {
-    // padding: 0 18px;
-
     &.slick-center {
 
       .story__thumb {
-        // width: 190px;
-        // height: 190px;
         transform: scale(1.59);
         margin-bottom: 54px;
         margin-top: 0;

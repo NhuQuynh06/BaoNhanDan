@@ -661,10 +661,13 @@ a:hover {
   .rank-1 {
     background: #DC3545 url(../img/trong-dong.png) center top no-repeat;
 
-    img {
+    .wrap-img {
       position: absolute;
       top: -27px;
       left: 55px;
+      width: 446px;
+      height: 590px;
+      background: url(../img/img-left.png) no-repeat;
     }
 
     .story {
@@ -678,10 +681,13 @@ a:hover {
     margin-bottom: 50px;
     background: #17A2B8 url(../img/trong-dong.png) center bottom no-repeat;
 
-    img {
+    .wrap-img {
       position: absolute;
       right: 26px;
       top: -27px;
+      width: 446px;
+      height: 590px;
+      background: url(../img/img-right.png) no-repeat;
     }
 
     .story {
@@ -741,15 +747,21 @@ a:hover {
     }
 
     .story {
-      padding-left: 101px;
 
       &__heading {
+        padding-left: 101px;
         font-weight: $font-weight-normal;
         font-size: 14px;
         line-height: 22px;
         color: #212529;
         font-family: "noto-regular";
         pointer-events: none;
+      }
+
+      &__thumb {
+        width: 90px;
+        height: 100px;
+        float: left;
       }
     }
 
@@ -759,6 +771,42 @@ a:hover {
 
     .row {
       margin-bottom: 60px;
+
+      .story:nth-child(1) {
+        .story__thumb {
+          background: url(../img/1.png) no-repeat;
+        }
+      }
+
+      .story:nth-child(2) {
+        .story__thumb {
+          background: url(../img/2.png) no-repeat;
+        }
+      }
+
+      .story:nth-child(3) {
+        .story__thumb {
+          background: url(../img/3.png) no-repeat;
+        }
+      }
+
+      .story:nth-child(4) {
+        .story__thumb {
+          background: url(../img/4.png) no-repeat;
+        }
+      }
+
+      .story:nth-child(5) {
+        .story__thumb {
+          background: url(../img/5.png) no-repeat;
+        }
+      }
+
+      .story:nth-child(6) {
+        .story__thumb {
+          background: url(../img/6.png) no-repeat;
+        }
+      }
     }
   }
 }
@@ -784,24 +832,17 @@ a:hover {
 
 .box-style-7 {
   padding-bottom: 45px;
+  margin-top: 48px;
 
 
   .col-4:nth-child(-n+3) .story {
     margin-top: 0;
   }
 
-  .box-content {
-    // width: 1136px;
-    // overflow-x: scroll;
-    margin-bottom: 28px;
-  }
-
   .story {
     margin-top: 44px;
-    // margin-left: 40px;
 
     &__thumb {
-      // width: 352px;
       height: 100%;
       background-color: transparent;
       margin-bottom: 12px;
@@ -837,6 +878,8 @@ a:hover {
 
   .btn-pri {
     border-radius: 4px;
+    margin-top: 28px;
+    margin-bottom: 0;
 
     a {
       height: 51px;
@@ -986,6 +1029,10 @@ a:hover {
   .article {
     margin-top: 36px;
   }
+
+  .breadcrumb {
+    margin-top: 48px;
+  }
 }
 
 // ==================================================================
@@ -1038,25 +1085,26 @@ a:hover {
     color: #222222;
     -webkit-column-count: 4;
     -moz-column-count: 4;
-    column-count: 4;
+    column-count: auto;
     font-family: "noto-regular";
     column-width: 255px;
-    column-gap: 32px;
+    column-gap: 38px;
     overflow-x: scroll;
     column-rule: 1px solid #EFF1F3;
   }
 
   .rank-2 {
-    height: 500%;
+    display: none;
+    height: 400%;
     -webkit-column-break-inside: avoid;
     position: relative;
 
     .box-style-9 {
       display: flex;
       position: absolute;
-      margin-left: 280px;
+      margin-left: -12px;
       padding-bottom: 200px;
-      background: #fff url("../img/header.png") center -3px no-repeat;
+      background: url("../img/header.png") center -3px no-repeat;
       padding-top: 80px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -1065,17 +1113,17 @@ a:hover {
 
 
       @media (min-height: 800px) {
-        background: #fff url("../img/header.png") center 20px no-repeat;
+        background: url("../img/header.png") center 20px no-repeat;
         padding-top: 115px;
       }
 
       @media (min-height: 850px) {
-        background: #fff url(../img/header.png) center 35px no-repeat;
+        background: url(../img/header.png) center 35px no-repeat;
         padding-top: 130px;
       }
 
       @media (min-height: 900px) {
-        background: #fff url("../img/header.png") center 109px no-repeat;
+        background: url("../img/header.png") center 109px no-repeat;
         padding-top: 200px;
       }
 
@@ -1117,6 +1165,15 @@ a:hover {
     }
   }
 
+  .description {
+    padding-top: .8rem;
+    font-size: 16px;
+    font-style: italic;
+    color: #888;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
 }
 
 // style arrow
@@ -1129,20 +1186,19 @@ a:hover {
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .slideNext {
   position: absolute;
   right: -100px;
-  background: url(../img/arrow-right.png) no-repeat;
-  width: 104px;
-  height: 64px;
+  background: #808080 url(../img/arrow-right.png) center center no-repeat;
 }
 
 .slidePrev {
   position: absolute;
   left: -100px;
-  background: url(../img/arrow-left.png) no-repeat;
+  background: #808080 url(../img/arrow-left.png) center center no-repeat;
 }
 
 
