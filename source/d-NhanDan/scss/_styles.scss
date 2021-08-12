@@ -1053,7 +1053,10 @@ a:hover {
   margin: 50px 0;
   position: relative;
 
-  p,
+  p {
+    font-size: 1.6rem;
+  }
+
   h1,
   h2,
   h3,
@@ -1061,13 +1064,20 @@ a:hover {
   h5,
   h6 {
     color: #222222;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-top: 9px;
+    font-weight: $font-weight-bold;
+  }
+
+  .caption {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 1.5rem !important;
   }
 
   .box-heading {
     text-align: center;
-    padding-bottom: 32px;
+    padding-bottom: 50px;
 
     .heading {
       font-family: "noto-bold";
@@ -1126,7 +1136,7 @@ a:hover {
 
       @media (min-height: 900px) {
         padding-top: 185px;
-        padding-bottom: 60px;
+        padding-bottom: 50px;
       }
 
       .story {

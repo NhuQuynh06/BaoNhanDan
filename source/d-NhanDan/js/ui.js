@@ -1,5 +1,5 @@
 // get height container 3-article-text
-var heightWindown = window.innerHeight - 270;
+var heightWindown = window.innerHeight - 290;
 $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 
 
