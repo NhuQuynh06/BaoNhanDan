@@ -1055,6 +1055,10 @@ a:hover {
 
   p {
     font-size: 1.6rem;
+    padding-top: 20px;
+  }
+  p:first-child {
+    padding-top: 0;
   }
 
   h1,
@@ -1065,7 +1069,7 @@ a:hover {
   h6 {
     color: #222222;
     font-size: 2rem;
-    margin-top: 9px;
+    margin-top: 20px;
     font-weight: $font-weight-bold;
   }
 
