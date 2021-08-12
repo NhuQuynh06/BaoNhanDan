@@ -4,56 +4,28 @@ $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 
 
 // make a button to scroll horizontally in div
-const scrollWidth = $(".main-content")[0].scrollWidth;
-const countSlide = Math.round(scrollWidth / 1173);
-let index = 0;
-$(document).ready(function () {
-    if (countSlide == 0) {
-        setTimeout(() => {
-            $(".main-content .rank-2").css("display", "block");
-        }, 1200);
-    }
-});
-let isDisplay = false;
+
 $('.slideNext').on('click', function (e) {
     $('.main-content').animate({ scrollLeft: '+=1173' }, 1000);
-    index = index + 1;
-    if (index == countSlide) {
-        setTimeout(() => {
-            $(".main-content .rank-2").css("display", "block");
-        }, 1100);
-    }
-
 });
 
 $('.slidePrev').on('click', function (e) {
-    isDisplay = false;
-    if (index > countSlide) {
-        index = countSlide
-    }
     $('.main-content').animate({ scrollLeft: '-=1173' }, 1000);
-
-    if (index == countSlide) {
-        isDisplay = true;
-        $(".main-content .rank-2").css("display", "none");
-    } else {
-        $(".main-content .rank-2").css("display", "none");
-    }
-
-    if (isDisplay) {
-        setTimeout(() => {
-            $(".main-content .rank-2").css("display", "block");
-        }, 1100);
-    }
-
-    if (index > 0 && (index <= countSlide)) {
-        index = index - 1;
-    }
-
-    if (index == 0) {
-        $(".main-content .rank-2").css("display", "none");
-    }
 });
+
+// get widthScroll
+
+var widthScroll = $('.main-content')[0].scrollWidth;
+var column = Math.round(widthScroll / 293);
+
+var missColumn = (4 - column % 4)
+console.log('missColumn', missColumn);
+if (missColumn < 4) {
+    var height = missColumn * 100
+    var number = height + "%"
+    $('.column-miss ').css('height', number);
+}
+
 
 
 // auto scroll
@@ -108,3 +80,5 @@ if (document.querySelector('.section-homepage')) {
 
     }).scroll();
 }
+
+

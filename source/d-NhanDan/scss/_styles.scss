@@ -1094,7 +1094,6 @@ a:hover {
   }
 
   .rank-2 {
-    display: none;
     height: 400%;
     -webkit-column-break-inside: avoid;
     position: relative;
@@ -1167,6 +1166,15 @@ a:hover {
     color: #888;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .strong-text {
+    font-weight: 600;
+  }
+
+  .column-miss {
+    position: relative;
+    background-color: white;
   }
 
 }
