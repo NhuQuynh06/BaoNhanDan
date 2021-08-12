@@ -4,43 +4,68 @@ $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 
 
 // make a button to scroll horizontally in div
-var scrollWidth = $(".main-content")[0].scrollWidth;
-var countSlide = (scrollWidth - scrollWidth % 1173) / 1173;
-console.log('countSlide', countSlide);
-
-window.onload = function () {
-    if (countSlide == 0) {
-        $(".main-content .rank-2").css("display", "block");
-    }
-};
-
-
-
+const scrollWidth = $(".main-content")[0].scrollWidth;
+const countSlide = Math.round(scrollWidth / 1173);
+console.log('scrollWidth => ', scrollWidth);
+console.log(countSlide);
 let index = 0;
+$(document).ready(function () {
+    if (countSlide == 0) {
+        setTimeout(() => {
+            $(".main-content .rank-2").css("display", "block");
+            console.log('show rank-2');
+        }, 1200);
+    }
+});
+let isDisplay = false;
 $('.slideNext').on('click', function (e) {
     $('.main-content').animate({ scrollLeft: '+=1173' }, 1000);
-    if (index < countSlide) {
-        index = index + 1;
-    }
-    // show rank-2
-    console.log('index', index);
+    index = index + 1;
+    console.log('index next', index);
+    console.log('countSlide => ', countSlide);
     if (index == countSlide) {
         console.log('scroll left max');
         setTimeout(() => {
             $(".main-content .rank-2").css("display", "block");
+            console.log('show rank-2');
         }, 1100);
     }
+
 });
 
 $('.slidePrev').on('click', function (e) {
-    $('.main-content').animate({ scrollLeft: '-=1173' }, 1000);
-    if (index > 0) {
-        index = index - 1;
+    isDisplay = false;
+    if (index > countSlide) {
+        index = countSlide
     }
-    if (index == countSlide - 2 ) {
+    $('.main-content').animate({ scrollLeft: '-=1173' }, 1000);
+
+    console.log('index prev', index);
+    if (index == countSlide) {
+        isDisplay = true;
         console.log('hide rank-2');
         $(".main-content .rank-2").css("display", "none");
+    } else {
+        $(".main-content .rank-2").css("display", "none");
     }
+
+    if (isDisplay) {
+        setTimeout(() => {
+            $(".main-content .rank-2").css("display", "block");
+            console.log('show rank-2');
+        }, 1100);
+    }
+
+    if (index > 0 && (index <= countSlide)) {
+        index = index - 1;
+    }
+
+    if (index == 0) {
+        console.log('ve o');
+        $(".main-content .rank-2").css("display", "none");
+    }
+    console.log(isDisplay);
+
 });
 
 

@@ -1103,28 +1103,23 @@ a:hover {
       display: flex;
       position: absolute;
       margin-left: -12px;
-      padding-bottom: 200px;
-      background: url("../img/header.png") center -3px no-repeat;
-      padding-top: 80px;
+      background: #fff url("../img/header.png") center 0 no-repeat;
+      padding-bottom: 160px;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin-top: 0;
       margin-bottom: 0;
-
-
+      margin-top: 0;
+      padding-top: 65px;
+      
+      
       @media (min-height: 800px) {
-        background: url("../img/header.png") center 20px no-repeat;
-        padding-top: 115px;
-      }
-
-      @media (min-height: 850px) {
-        background: url(../img/header.png) center 35px no-repeat;
-        padding-top: 130px;
+        padding-top: 78px;
+        padding-bottom: 70px;
       }
 
       @media (min-height: 900px) {
-        background: url("../img/header.png") center 109px no-repeat;
-        padding-top: 200px;
+        padding-top: 185px;
+        padding-bottom: 60px;
       }
 
       .story {
