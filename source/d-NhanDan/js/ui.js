@@ -6,14 +6,11 @@ $(".section-article-text .box-style-10 .main-content").height(heightWindown);
 // make a button to scroll horizontally in div
 const scrollWidth = $(".main-content")[0].scrollWidth;
 const countSlide = Math.round(scrollWidth / 1173);
-console.log('scrollWidth => ', scrollWidth);
-console.log(countSlide);
 let index = 0;
 $(document).ready(function () {
     if (countSlide == 0) {
         setTimeout(() => {
             $(".main-content .rank-2").css("display", "block");
-            console.log('show rank-2');
         }, 1200);
     }
 });
@@ -21,13 +18,9 @@ let isDisplay = false;
 $('.slideNext').on('click', function (e) {
     $('.main-content').animate({ scrollLeft: '+=1173' }, 1000);
     index = index + 1;
-    console.log('index next', index);
-    console.log('countSlide => ', countSlide);
     if (index == countSlide) {
-        console.log('scroll left max');
         setTimeout(() => {
             $(".main-content .rank-2").css("display", "block");
-            console.log('show rank-2');
         }, 1100);
     }
 
@@ -40,10 +33,8 @@ $('.slidePrev').on('click', function (e) {
     }
     $('.main-content').animate({ scrollLeft: '-=1173' }, 1000);
 
-    console.log('index prev', index);
     if (index == countSlide) {
         isDisplay = true;
-        console.log('hide rank-2');
         $(".main-content .rank-2").css("display", "none");
     } else {
         $(".main-content .rank-2").css("display", "none");
@@ -52,7 +43,6 @@ $('.slidePrev').on('click', function (e) {
     if (isDisplay) {
         setTimeout(() => {
             $(".main-content .rank-2").css("display", "block");
-            console.log('show rank-2');
         }, 1100);
     }
 
@@ -61,11 +51,8 @@ $('.slidePrev').on('click', function (e) {
     }
 
     if (index == 0) {
-        console.log('ve o');
         $(".main-content .rank-2").css("display", "none");
     }
-    console.log(isDisplay);
-
 });
 
 
