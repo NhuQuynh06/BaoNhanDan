@@ -43,7 +43,7 @@ function alterSummaryHeight() {
     var outerHeight = $('.rank-2 > .box-style-9').outerHeight();
     $('.rank-2 > .box-style-9 .story').height($('.rank-2 > .box-style-9').height() - (outerHeight - boxHeight));
     $('.rank-2 > .box-style-9 .story').each(function () {
-        var height = $(this).height() - $(this).find('.story__thumb').height() - $(this).find('.story__heading').height();
+        var height = $(this).height() - $(this).find('.story__thumb').height() - $(this).find('.story__heading').height() - 20;
         $(this).find('.story__summary').css('max-height', height + 'px');
     });
     shortenText();
