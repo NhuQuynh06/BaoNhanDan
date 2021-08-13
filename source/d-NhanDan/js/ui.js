@@ -1,6 +1,6 @@
 
 // get height container 3-article-text
-var boxHeight = window.innerHeight - 290;
+var boxHeight = Math.max(window.innerHeight - 290, 350);
 $(".section-article-text .box-style-10 .main-content").height(boxHeight);
 
 if ($("#scroll").length > 0) {
@@ -19,7 +19,6 @@ if ($("#scroll").length > 0) {
         imageCount++;
         if (imageCount >= imageTotal) {
             console.log('Images loaded');
-            alterSummaryHeight();
             addColumns();
         }
     }).each(function () {
@@ -27,7 +26,7 @@ if ($("#scroll").length > 0) {
             $(this).trigger('load');
         }
     });
-    waitForWebfonts(['noto-regular'], function () {
+    waitForWebfonts(['noto-regular', 'roboto-medium', 'roboto-regular'], function () {
         console.log('Fonts loaded');
         alterSummaryHeight();
         addColumns();
@@ -40,7 +39,7 @@ if ($("#scroll").length > 0) {
 
 
 function alterSummaryHeight() {
-    var boxHeight = window.innerHeight - 290;
+    var boxHeight = Math.max(window.innerHeight - 290, 350);
     var outerHeight = $('.rank-2 > .box-style-9').outerHeight();
     $('.rank-2 > .box-style-9 .story').height($('.rank-2 > .box-style-9').height() - (outerHeight - boxHeight));
     $('.rank-2 > .box-style-9 .story').each(function () {
@@ -118,7 +117,6 @@ function addColumns() {
     $('.column-miss').remove();
     var widthScroll = $('.main-content')[0].scrollWidth;
     var column = Math.ceil(widthScroll / 293);
-
     var missColumn = (4 - column % 4);
     console.log('missColumn', missColumn);
     if (missColumn < 4) {
