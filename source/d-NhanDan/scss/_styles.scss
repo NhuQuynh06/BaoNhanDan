@@ -1055,10 +1055,7 @@ a:hover {
 
   p {
     font-size: 1.6rem;
-    padding-top: 20px;
-  }
-  p:first-child {
-    padding-top: 0;
+    padding-bottom: 20px;
   }
 
   h1,
@@ -1069,7 +1066,7 @@ a:hover {
   h6 {
     color: #222222;
     font-size: 2rem;
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: $font-weight-bold;
   }
 
@@ -1130,16 +1127,18 @@ a:hover {
       text-overflow: ellipsis;
       margin-bottom: 0;
       margin-top: 0;
-      padding-top: 65px;
+      // 750px
+      padding-top: 93px;
+      // padding-top: 150px;
 
 
-      @media (min-height: 800px) {
-        padding-top: 78px;
-        padding-bottom: 70px;
-      }
+      // @media (min-height: 800px) {
+      //   padding-top: 78px;
+      //   padding-bottom: 70px;
+      // }
 
       @media (min-height: 900px) {
-        padding-top: 185px;
+        padding-top: 85px;
         padding-bottom: 50px;
       }
 
@@ -1165,16 +1164,7 @@ a:hover {
         &__summary {
           width: 252px;
           height: 100%;
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
           font-family: "roboto-regular";
-
-          @media (min-height: 800px) {
-            display: -webkit-box;
-            -webkit-line-clamp: inherit;
-            -webkit-box-orient: vertical;
-          }
         }
       }
 
@@ -1212,18 +1202,27 @@ a:hover {
   z-index: 1;
   cursor: pointer;
   border-radius: 4px;
+  opacity: 0.5;
 }
 
 .slideNext {
   position: absolute;
-  right: -100px;
-  background: #808080 url(../img/arrow-right.png) center center no-repeat;
+  right: -20px;
+  background: #000000 url(../img/arrow-right.png) center center no-repeat;
+
+  @media (min-width: 1440px) {
+    right: -100px;
+  }
 }
 
 .slidePrev {
   position: absolute;
-  left: -100px;
-  background: #808080 url(../img/arrow-left.png) center center no-repeat;
+  left: -20px;
+  background: #000000 url(../img/arrow-left.png) center center no-repeat;
+
+  @media (min-width: 1440px) {
+    left: -100px;
+  }
 }
 
 

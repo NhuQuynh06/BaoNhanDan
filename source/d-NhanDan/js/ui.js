@@ -1,7 +1,6 @@
 // get height container 3-article-text
-var heightWindown = window.innerHeight - 290;
+var heightWindown = window.innerHeight - 350;
 $(".section-article-text .box-style-10 .main-content").height(heightWindown);
-
 
 // make a button to scroll horizontally in div
 
@@ -14,19 +13,18 @@ $('.slidePrev').on('click', function (e) {
 });
 
 // get widthScroll
-
-var widthScroll = $('.main-content')[0].scrollWidth;
-var column = Math.round(widthScroll / 293);
-
-var missColumn = (4 - column % 4)
-console.log('missColumn', missColumn);
-if (missColumn < 4) {
-    var height = missColumn * 100
-    var number = height + "%"
-    $('.column-miss ').css('height', number);
-}
-
-
+setInterval(() => {
+    var widthScroll = $('.main-content')[0].scrollWidth;
+    var column = Math.round(widthScroll / 293);
+    
+    var missColumn = (4 - column % 4)
+    console.log('missColumn', missColumn);
+    if (missColumn < 4) {
+        var height = missColumn * 100
+        var number = height + "%"
+        $('.column-miss ').css('height', number);
+    }
+}, 2000);
 
 // auto scroll
 if (document.querySelector('.section-homepage')) {

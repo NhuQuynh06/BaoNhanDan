@@ -389,11 +389,11 @@
       font-size: 14px;
       font-weight: 500;
       text-transform: uppercase;
-      padding: 10px 18px;
+      padding: 10px 0 10px 18px;
       display: inline-block;
       color: white;
       font-family: "roboto-medium";
-      width: 200px;
+      width: 230px;
     }
   }
 
@@ -413,6 +413,7 @@
   }
 
   .btn-search {
+    width: 48px;
     font-size: 1.6rem;
     position: absolute;
     right: 9px;
@@ -432,7 +433,7 @@
 
 .chevron-down {
   position: relative;
-  padding: 10px 40px;
+  padding: 10px 25px;
 
   &::before {
     content: '';
