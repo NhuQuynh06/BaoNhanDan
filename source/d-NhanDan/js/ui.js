@@ -19,6 +19,7 @@ if ($("#scroll").length > 0) {
         imageCount++;
         if (imageCount >= imageTotal) {
             console.log('Images loaded');
+            alterSummaryHeight();
             addColumns();
         }
     }).each(function () {
@@ -114,17 +115,15 @@ function waitForWebfonts(fonts, callback) {
 
 
 function addColumns() {
-    $('.column-miss').hide();
+    $('.column-miss').remove();
     var widthScroll = $('.main-content')[0].scrollWidth;
-    var column = Math.round(widthScroll / 293);
+    var column = Math.ceil(widthScroll / 293);
 
     var missColumn = (4 - column % 4);
     console.log('missColumn', missColumn);
     if (missColumn < 4) {
-        $('.column-miss').css('height', (missColumn * 100) + '%').show();
-    } else {
-        $('.column-miss').hide();
-    }
+        $('.rank-2').before('<div class="column-miss" style="height:'+(missColumn * 100) + '%"></div>');
+    } 
 }
 
 
