@@ -6,8 +6,8 @@ $(".section-article-text .box-style-10 .main-content").height(boxHeight);
 if ($("#scroll").length > 0) {
     // make a button to scroll horizontally in div
     $('.slideNext').on('click', function (e) {
-		if($('.main-content').scrollLeft() > $('.main-content')[0].scrollWidth - 1170) return;
-        $('.main-content').animate({ scrollLeft: '+=1172' }, 1000);		
+        if ($('.main-content').scrollLeft() > $('.main-content')[0].scrollWidth - 1170) return;
+        $('.main-content').animate({ scrollLeft: '+=1172' }, 1000);
     });
     $('.slidePrev').on('click', function (e) {
         $('.main-content').animate({ scrollLeft: '-=1172' }, 1000);
@@ -31,12 +31,7 @@ if ($("#scroll").length > 0) {
         alterSummaryHeight();
         addColumns();
     })
-
-    //window.setTimeout(addColumns, 5000);
-
-
 }
-
 
 function alterSummaryHeight() {
     var boxHeight = Math.max(window.innerHeight - 290, 350);
@@ -98,12 +93,10 @@ function waitForWebfonts(fonts, callback) {
                     if (interval) { clearInterval(interval); }
                 }
 
-                // If all fonts have been loaded
-                if (loadedFonts >= fonts.length) {
-                    if (loadedFonts >= fonts.length) {
-                        callback();
-                        return true;
-                    }
+                // If all fonts have been loaded                
+                if (loadedFonts == fonts.length) {
+                    callback();
+                    return true;
                 }
             };
 
@@ -112,18 +105,20 @@ function waitForWebfonts(fonts, callback) {
     }
 };
 
-
 function addColumns() {
     $('.column-miss').remove();
+    var rank2 = $('<div>').append($('#scroll .rank-2').clone()).html();
+    $('#scroll .rank-2').remove();
     var widthScroll = $('.main-content')[0].scrollWidth;
-    var column = Math.ceil(widthScroll / 293);
+    var column = Math.ceil(widthScroll / 294);
     var missColumn = (4 - column % 4);
     console.log('missColumn', missColumn);
+    $('#scroll .rank-1').after(rank2);
     if (missColumn < 4) {
-        $('.rank-2').before('<div class="column-miss" style="height:'+(missColumn * 100) + '%"></div>');
-    } 
-}
+        $('#scroll .rank-1').after('<div class="column-miss" style="height:' + (missColumn * 100) + '%"></div>');
+    }
 
+}
 
 // auto scroll
 if (document.querySelector('.section-homepage')) {
@@ -135,7 +130,7 @@ if (document.querySelector('.section-homepage')) {
         monitor = false;
         $('html, body').animate({ scrollTop: $('#chapter' + $(this).attr('data-link')).offset().top }, 1000, function () { monitor = true; });
     });
-    $(window).scroll(function () {
+    $(window).scroll(function (e) {
         var scroll = $(window).scrollTop();
         var height = $(window).height();
 
@@ -149,7 +144,7 @@ if (document.querySelector('.section-homepage')) {
         $('.wrap-dots .dots').eq(chapter - 1).addClass('active');
         activeChapter = chapter;
 
-        if (!monitor) { return; }
+        if (!monitor) { e.preventDefault(); return; }
 
         var monitorObject;
         if (scroll > lastScroll) {
@@ -165,7 +160,7 @@ if (document.querySelector('.section-homepage')) {
             if (activeChapter > 1) {
                 monitorObject = $('#chapter' + activeChapter);
                 if (monitorObject.length > 0) {
-                    if (monitorObject.offset().top < scroll + height && monitorObject.offset().top > scroll + height * 0.6) {
+                    if (monitorObject.offset().top > scroll + height * 0.2) {
                         monitor = false;
                         $('html, body').animate({ scrollTop: $('#chapterbtn' + (activeChapter - 1)).offset().top - height * 0.7 }, 1000, function () { monitor = true; });
                     }

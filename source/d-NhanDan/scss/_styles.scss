@@ -1046,11 +1046,16 @@ a:hover {
 .section-article-text {
   .container {
     position: relative;
+    padding-left: 21px;
+    padding-right: 21px;
   }
 
   .box-social {
     margin-bottom: 50px;
   }
+  .box-style-10 .box-content::after {
+    display: none;
+}
 }
 
 .column-miss {

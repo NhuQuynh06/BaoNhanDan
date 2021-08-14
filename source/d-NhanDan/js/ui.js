@@ -107,13 +107,17 @@ function waitForWebfonts(fonts, callback) {
 
 function addColumns() {
     $('.column-miss').remove();
-    var widthScroll = $('.main-content')[0].scrollWidth + 19;
-    var column = Math.ceil(widthScroll / 293);
+    var rank2 = $('<div>').append($('#scroll .rank-2').clone()).html();
+    $('#scroll .rank-2').remove();
+    var widthScroll = $('.main-content')[0].scrollWidth;
+    var column = Math.ceil(widthScroll / 294);
     var missColumn = (4 - column % 4);
     console.log('missColumn', missColumn);
+    $('#scroll .rank-1').after(rank2);
     if (missColumn < 4) {
-        $('.rank-2').before('<div class="column-miss" style="height:' + (missColumn * 100) + '%"></div>');
+        $('#scroll .rank-1').after('<div class="column-miss" style="height:' + (missColumn * 100) + '%"></div>');
     }
+
 }
 
 // auto scroll

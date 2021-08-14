@@ -605,7 +605,7 @@
           height: 20px;
           position: absolute;
           right: 50%;
-          top: 45px;
+          bottom: -5px;
         }
       }
 
@@ -910,7 +910,7 @@
 
     &__heading a {
       font-family: "noto-regular";
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-bold;
       font-size: 14px;
       line-height: 20px;
       color: #212529;
@@ -1030,9 +1030,9 @@
     }
 
     a {
-      font-family: "noto-bold";
+      font-family: "noto-regular";
       font-style: normal;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 14px;
       line-height: 20px;
       color: #212529;
@@ -1050,7 +1050,7 @@
     font-family: "noto-bold";
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #DC3545;
