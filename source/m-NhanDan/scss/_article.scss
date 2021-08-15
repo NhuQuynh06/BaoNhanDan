@@ -141,9 +141,10 @@
     }
 
     .strong-text {
-        font-family: "noto-bold";
+        // font-family: "noto-bold";
         margin-top: 16px;
-        font-weight: $font-weight-bold;
+        // font-weight: $font-weight-bold;
+        font-weight: 600;
         font-size: 16px;
         line-height: 22px;
         color: #212529;
