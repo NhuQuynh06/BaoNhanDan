@@ -173,4 +173,13 @@ if (document.querySelector('.section-homepage')) {
     }).scroll();
 }
 
+// add shadow css
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 450) {
+        $('.header__navigation').addClass('shadow');
+    } else {
+        $('.header__navigation').removeClass('shadow');
+    }
 
+});

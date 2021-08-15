@@ -15,12 +15,13 @@
 .header {
 
   &__banner {
-    background: url(../img/banner.png) center center no-repeat;
     height: 440px;
     background-size: 100%;
     width: 100%;
     position: relative;
-    margin-top: 44px;
+    margin-top: 50px;
+    background: url(../img/banner.png) no-repeat center center;
+    background-size: cover;
 
     @media (min-width:1441px) {
       height: 500px;
@@ -33,8 +34,6 @@
 
     .container {
       position: relative;
-      height: 440px;
-
     }
 
     .heading {
@@ -210,4 +209,8 @@
       }
     }
   }
+}
+
+.shadow {
+  box-shadow: 0 4px 2px -2px #ccc;
 }
