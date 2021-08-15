@@ -166,13 +166,12 @@ a:hover {
   margin-top: 16px;
 
   button {
-    width: 95px;
-    height: 36px;
+    width: 105px;
+    height: 28px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: white;
     text-transform: capitalize;
     display: flex;
     align-items: center;
@@ -192,7 +191,7 @@ a:hover {
       margin-right: 6px;
 
       &::before {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 20px;
         color: white;
       }
@@ -340,13 +339,17 @@ a:hover {
 
     a {
       font-weight: 900;
-      font-size: 40px;
-      line-height: 67px;
+      font-size: 32px;
+      line-height: 50px;
       text-transform: uppercase;
       color: #212529;
       font-family: "playfair-display";
-      // // @include playfair-display();
       display: block;
+
+      @media (min-width: 1400px) {
+        font-size: 40px;
+        line-height: 67px;
+      }
     }
   }
 
@@ -986,15 +989,21 @@ a:hover {
         line-height: 26px;
         color: #212529;
         margin-bottom: 8px;
-        font-family: "roboto-medium";
+        font-family: "noto-bold";
       }
 
       &__summary {
         font-weight: $font-weight-normal;
         font-size: 14px;
         line-height: 20px;
-        color: #343A40;
+        color: #6C757D;
         font-family: "roboto-regular";
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
       }
     }
   }
@@ -1053,9 +1062,10 @@ a:hover {
   .box-social {
     margin-bottom: 50px;
   }
+
   .box-style-10 .box-content::after {
     display: none;
-}
+  }
 }
 
 .column-miss {
