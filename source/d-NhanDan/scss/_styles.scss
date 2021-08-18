@@ -273,8 +273,10 @@ a:hover {
 
     .story {
       margin-bottom: 62px;
-      background: url(../img/baiviet-tbt.png) center center no-repeat;
-      height: 180px;
+
+      .white-space {
+        white-space: nowrap;
+      }
     }
 
     .story__summary p {
