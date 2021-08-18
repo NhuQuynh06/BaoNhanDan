@@ -20,7 +20,7 @@
     width: 100%;
     position: relative;
     margin-top: 50px;
-    background: url(../img/banner.png) no-repeat center center;
+    background: url(../img/banner-v2.png) no-repeat center center;
     background-size: cover;
 
     @media (min-width:1441px) {
@@ -34,12 +34,13 @@
 
     .container {
       position: relative;
+      height: 100%;
     }
 
     .heading {
       position: absolute;
-      right: 52px;
-      top: 141px;
+      left: 82px;
+      top: 102px;
       text-align: center;
       width: 586px;
     }
@@ -67,7 +68,7 @@
       line-height: 20px;
       position: absolute;
       bottom: 5px;
-      right: 10px;
+      left: 10px;
     }
 
   }

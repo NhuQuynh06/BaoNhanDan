@@ -4,13 +4,21 @@ var boxHeight = Math.max(window.innerHeight - 290, 350);
 $(".section-article-text .box-style-10 .main-content").height(boxHeight);
 
 if ($("#scroll").length > 0) {
+    var pageWidth = $('#scroll').width() + 38;
     // make a button to scroll horizontally in div
+    var scrolling = false;
     $('.slideNext').on('click', function (e) {
+        e.preventDefault();
         if ($('.main-content').scrollLeft() > $('.main-content')[0].scrollWidth - 1170) return;
-        $('.main-content').animate({ scrollLeft: '+=1172' }, 1000);
+        if (scrolling) { return; }        
+        scrolling = true;
+        $('.main-content').animate({ scrollLeft: '+=' + pageWidth }, 1000, function () { scrolling = false; });
     });
     $('.slidePrev').on('click', function (e) {
-        $('.main-content').animate({ scrollLeft: '-=1172' }, 1000);
+        e.preventDefault();
+        if (scrolling) { return; }
+        scrolling = true;
+        $('.main-content').animate({ scrollLeft: '-=' + pageWidth }, 1000, function () { scrolling = false; });
     });
 
     var imageTotal = $(".main-content img").length;
@@ -34,6 +42,7 @@ if ($("#scroll").length > 0) {
 }
 
 function alterSummaryHeight() {
+    if ($('.rank-2 > .box-style-9').length == 0) return;
     var boxHeight = Math.max(window.innerHeight - 290, 350);
     var outerHeight = $('.rank-2 > .box-style-9').outerHeight();
     $('.rank-2 > .box-style-9 .story').height($('.rank-2 > .box-style-9').height() - (outerHeight - boxHeight));
@@ -83,37 +92,45 @@ function waitForWebfonts(fonts, callback) {
 
             node.style.fontFamily = font + ', sans-serif';
 
-            var interval;
-            function checkFont() {
+            //var interval;
+            function checkFont(_first) {
                 // Compare current width with original width
                 if (node && node.offsetWidth != width) {
                     ++loadedFonts;
                     node.parentNode.removeChild(node);
                     node = null;
-                    if (interval) { clearInterval(interval); }
+                    //if (interval) { clearInterval(interval); }
+                } else if (!_first) {
+                    setTimeout(checkFont, 50);
                 }
 
                 // If all fonts have been loaded                
-                if (loadedFonts == fonts.length) {
+                if (loadedFonts >= fonts.length) {
                     callback();
                     return true;
                 }
             };
 
-            if (!checkFont()) { interval = setInterval(checkFont, 50); }
+            if (!checkFont(true)) { setTimeout(checkFont, 50); }
         })(fonts[i]);
     }
 };
 
 function addColumns() {
     $('.column-miss').remove();
-    var rank2 = $('<div>').append($('#scroll .rank-2').clone()).html();
-    $('#scroll .rank-2').remove();
+    var rank2 = '';
+    if ($('#scroll .rank-2').length > 0) {
+        $('<div>').append($('#scroll .rank-2').clone()).html();
+        $('#scroll .rank-2').remove();
+    }
+    var colWidth = ($('#scroll').width() + 38) / 4;
     var widthScroll = $('.main-content')[0].scrollWidth;
-    var column = Math.ceil(widthScroll / 294);
+    var column = Math.ceil(widthScroll / colWidth);
     var missColumn = (4 - column % 4);
     console.log('missColumn', missColumn);
-    $('#scroll .rank-1').after(rank2);
+    if (rank2 != '') {
+        $('#scroll .rank-1').after(rank2);
+    }
     if (missColumn < 4) {
         $('#scroll .rank-1').after('<div class="column-miss" style="height:' + (missColumn * 100) + '%"></div>');
     }
@@ -172,14 +189,3 @@ if (document.querySelector('.section-homepage')) {
 
     }).scroll();
 }
-
-// add shadow css
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 450) {
-        $('.header__navigation').addClass('shadow');
-    } else {
-        $('.header__navigation').removeClass('shadow');
-    }
-
-});

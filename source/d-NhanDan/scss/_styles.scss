@@ -272,10 +272,9 @@ a:hover {
     text-align: center;
 
     .story {
-
-      &:last-of-type {
-        margin-bottom: 62px;
-      }
+      margin-bottom: 62px;
+      background: url(../img/baiviet-tbt.png) center center no-repeat;
+      height: 180px;
     }
 
     .story__summary p {
@@ -1129,7 +1128,6 @@ a:hover {
       -moz-column-count: 4;
       column-count: 4;
       font-family: "noto-regular";
-      column-width: 255px;
       column-gap: 38px;
       overflow-x: scroll;
       column-rule: 1px solid #EFF1F3;
