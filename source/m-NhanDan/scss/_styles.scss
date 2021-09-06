@@ -1137,10 +1137,56 @@
 
   }
 
-
-
   .rank-1 {
     font-size: 16px;
+  }
+
+  .wrap-player {
+
+    padding: 12px 0;
+    margin-top: 20px;
+    margin: 20px 0 0;
+
+    @media (min-width: 375px) {
+      border-top: 1px solid #DDDDDD;
+      border-bottom: 1px solid #DDDDDD;
+    }
+
+
+    .text {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0;
+      margin-right: 20px;
+      text-align: left;
+
+      @media (min-width: 375px) {
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+
+    .bm-player {
+      margin: 10px -16px 0 -16px;
+
+      @media (min-width: 375px) {
+        margin-top: 6px;
+      }
+
+    }
+
+
+    // .bm-player {
+    //   height: 48px;
+    //   margin-top: 0;
+    //   width: 600px;
+    // }
+
+    // span.bg,
+    // .fill-recent {
+    //   top: 23px !important;
+    // }
   }
 
 }

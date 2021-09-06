@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <!-- CSS Page -->
     <link rel="stylesheet" type="text/css" href="../styles/css/d-nhandan.css">
+    <link rel="stylesheet" type="text/css" href="../styles/css/d-audio-player.css">
 </head>
 
 <body>
@@ -110,6 +111,66 @@
                             Một số vấn đề lý luận và thực tiễn về chủ nghĩa xã hội và con đường đi lên chủ
                             nghĩa xã hội ở Việt Nam
                         </h3>
+                        <div class="wrap-player">
+                            <p class="text">Nghe bài viết</p>
+                            <div class="bm-player">
+                                <div class="left">
+                                    <button class="play-button">
+                                        <span><i class="fi-play"></i></span>
+                                    </button>
+                                    <span class="mute-wrap">
+                                        <button class="mute-button">
+                                            <i class="fi-volume"></i>
+                                        </button>
+                                        <div class="volume-slider">
+                                            <div class="volume-slider-handle"></div>
+                                        </div>
+                                    </span>
+                                    <div class="time-display">
+                                        <span class="current">0:00</span>
+                                        <span class="separator"> / </span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                    <div class="progress-bar" id="progress-bar">
+                                        <span class="bg"></span>
+                                        <div class="wrap-recent">
+                                            <span class="fill-recent" style="width: 40%">
+                                                <span class="current_time" id="current_time">0:00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <button class="select-voice" data-toggle="dropdown" id="bm-player-dropdownbtn"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="fi-microphone-alt"></i>
+                                        <span>Nam miền Bắc</span>
+                                    </button>
+                                    <div class="dropdown-menu voice-board dropdown-menu-right"
+                                        aria-labelledby="bm-player-dropdownbtn">
+                                        <ul>
+                                            <li class="voice-name is-active" data-display-name="Nam miền Bắc"
+                                                data-voice-id="1">
+                                                <i class="fi-waveform"></i>
+                                                <span>Nam miền Bắc</span>
+                                            </li>
+                                            <li class="voice-name" data-display-name="Nữ miền Bắc" data-voice-id="2">
+                                                <i class="fi-waveform"></i>
+                                                <span>Nữ miền Bắc</span>
+                                            </li>
+                                            <li class="voice-name" data-display-name="Nữ miền Nam" data-voice-id="6">
+                                                <i class="fi-waveform"></i>
+                                                <span>Nữ miền Nam</span>
+                                            </li>
+                                            <li class="voice-name" data-display-name="Nam miền Nam" data-voice-id="7">
+                                                <i class="fi-waveform"></i>
+                                                <span>Nam miền Nam</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="box-content">
                         <div class="main-content" id="scroll">

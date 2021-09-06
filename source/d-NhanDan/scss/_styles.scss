@@ -1103,7 +1103,7 @@ a:hover {
 
   .box-heading {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 
     .heading {
       font-family: "noto-bold";
@@ -1205,6 +1205,35 @@ a:hover {
   .column-miss {
     position: relative;
     background-color: white;
+  }
+
+  .wrap-player {
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 12px 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0;
+      margin-right: 20px;
+    }
+
+    .bm-player {
+      height: 48px;
+      margin-top: 0;
+      width: 600px;
+    }
+
+    span.bg,
+    .fill-recent {
+      top: 23px !important;
+    }
   }
 
 }
