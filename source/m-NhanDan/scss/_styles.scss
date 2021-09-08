@@ -961,9 +961,9 @@
 
 .box-style-8 {
   margin: 0 auto;
-  margin-top: 16px;
+  // margin-top: 16px;
   padding: 16px 0;
-  border-top: 1px solid #DEE2E6;
+  // border-top: 1px solid #DEE2E6;
   border-bottom: 1px solid #DEE2E6;
 
   .story {
@@ -1237,12 +1237,56 @@
   width: 100%;
   text-align: center;
   margin-top: 16px;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .text {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 0;
+
+  }
 
   audio {
     width: 100%;
 
     @media (min-width: 600px) {
       width: 500px;
+    }
+  }
+}
+
+.section-article {
+  .wrap-audio {
+    .text {
+      display: none;
+
+      @media (min-width: 425px) {
+        display: block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.section-article-text {
+  .wrap-audio {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .text {
+      margin-right: 20px;
     }
   }
 }
