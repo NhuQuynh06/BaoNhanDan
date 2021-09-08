@@ -905,11 +905,11 @@ a:hover {
 // ==================================================================
 
 .box-style-8 {
-  width: 632px;
+  width: 760px;
   margin: 0 auto;
-  margin-top: 28px;
+  // margin-top: 28px;
   padding: 16px 0;
-  border-top: 1px solid #DEE2E6;
+  // border-top: 1px solid #DEE2E6;
   border-bottom: 1px solid #DEE2E6;
 
   .story {
@@ -1302,7 +1302,6 @@ a:hover {
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
   padding: 12px 0;
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1317,5 +1316,15 @@ a:hover {
     text-transform: uppercase;
     padding: 0;
     margin-right: 20px;
+  }
+}
+
+.section-article {
+  .wrap-audio {
+    max-width: 760px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-bottom: 1px solid #f3f3f3 ;
+    // border-bottom: none !important;
   }
 }
