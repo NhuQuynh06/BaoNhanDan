@@ -1232,3 +1232,17 @@
   -webkit-box-shadow: inset 0 0 2px white;
   background-color: white;
 }
+
+.wrap-audio {
+  width: 100%;
+  text-align: center;
+  margin-top: 16px;
+
+  audio {
+    width: 100%;
+
+    @media (min-width: 600px) {
+      width: 500px;
+    }
+  }
+}
