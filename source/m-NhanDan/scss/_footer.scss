@@ -17,14 +17,18 @@
     }
 
     .rank-1 a {
-        background: url(../img/logo-2.png) center center no-repeat;
-        width: 289px;
+        background: url(../img/logo-2.png) center center/100% no-repeat;
+        width: 100%;
         height: 75px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 0;
         margin: 0 auto;
+
+        @media (min-width: 320px) {
+            background: url(../img/logo-2.png) center center no-repeat;
+        }
     }
 
     .rank-2 p {
