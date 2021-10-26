@@ -315,39 +315,60 @@
 
 
   .box-content {
-    height: 435px;
     padding-top: 34px;
-    padding-bottom: 35px;
-    background: #f7f7f7 url(../img/bg-04.png) 53%/159% 92% no-repeat;
+    padding-bottom: 45px;
+    background: #f7f7f7 url(../img/bg-04.png) center 15px/490px no-repeat;
 
+    @media (min-width: 321px) {
+      background: #f7f7f7 url(../img/bg-04.png) center 14px/515px no-repeat;
+    }
+
+    @media (min-width: 375px) {
+      background: #f7f7f7 url(../img/bg-04.png) center 12px/565px no-repeat;
+    }
 
     @media (min-width: 425px) {
-      background: #f7f7f7 url(../img/bg-04.png) -79px 12px no-repeat;
-
+      background: #f7f7f7 url(../img/bg-04.png) center 11px/595px no-repeat;
     }
 
-    @media (min-width: 768px) {
-      background: #f7f7f7 url(../img/bg-04.png) center 12px no-repeat;
-
-    }
 
     .item {
       display: flex;
       align-items: center;
       margin: 0 auto;
-      height: 92px;
-      margin-bottom: -5px;
-      padding: 10px 25px 10px 29px;
-      width: 320px;
+      height: 74px;
+      padding: 0 30px;
+
+      @media (min-width: 321px) {
+        height: 77px;
+      }
+
+      @media (min-width: 340px) {
+        padding: 0 38px;
+      }
+
+      @media (min-width: 360px) {
+        padding: 0 50px;
+      }
 
       @media (min-width: 375px) {
-        padding: 10px 34px 10px 36px;
+        height: 85px;
+        padding: 0 40px;
+        width: 375px;
+      }
+
+      @media (min-width: 375px) {
+        height: 85px;
+        padding: 0 40px;
         width: 375px;
       }
 
       @media (min-width: 425px) {
-        padding: 10px 28px 10px 45px;
+        height: 90px;
+        padding: 0 62px;
+        width: 425px;
       }
+
 
       .rank-1 {
         width: 35px;
