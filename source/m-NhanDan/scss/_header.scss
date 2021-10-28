@@ -117,7 +117,7 @@
   }
 
   &__logo {
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -126,8 +126,8 @@
     a {
       display: block;
       height: 20px;
-      width: 72px;
-      background: url(../img/logo.png);
+      width: 25px;
+      background: url(../img/logo-header.png) center center/20px no-repeat;
     }
 
     >* {

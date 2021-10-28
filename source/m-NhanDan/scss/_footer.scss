@@ -17,9 +17,10 @@
     }
 
     .rank-1 a {
-        background: url(../img/logo-2.png) center center/100% no-repeat;
+        // background: url(../img/logo-2.png) center center/100% no-repeat;
+        background: url(../img/logo-ver2.png) center center/100% no-repeat;
         width: 100%;
-        height: 75px;
+        height: 93px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,7 +28,7 @@
         margin: 0 auto;
 
         @media (min-width: 320px) {
-            background: url(../img/logo-2.png) center center no-repeat;
+            background: url(../img/logo-ver2.png) center center/289px no-repeat;
         }
     }
 
